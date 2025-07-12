@@ -941,8 +941,10 @@ header .container::after {
     padding: 0;
     max-width: 400px;
     width: 90%;
+    max-width: min(400px, calc(100vw - 40px));
     overflow: hidden;
     border: 3px solid #000;
+    box-sizing: border-box;
 }
 
 .password-form {
@@ -1002,14 +1004,16 @@ header .container::after {
 
 .password-input-group {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    gap: 15px;
     margin-bottom: 20px;
     position: relative;
     z-index: 2;
+    width: 100%;
 }
 
 .password-field {
-    flex: 1;
+    width: 100%;
     padding: 15px 20px;
     border: 3px solid #000;
     border-radius: 0;
@@ -1020,6 +1024,7 @@ header .container::after {
     color: #000;
     outline: none;
     transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
 .password-field:focus {
@@ -1028,6 +1033,7 @@ header .container::after {
 }
 
 .password-btn {
+    width: 100%;
     padding: 15px 25px;
     background: #000;
     color: #fff;
@@ -1042,6 +1048,7 @@ header .container::after {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .password-btn::before {
@@ -1084,23 +1091,26 @@ header .container::after {
     .password-container {
         width: 95%;
         margin: 20px;
+        max-width: 350px;
     }
     
     .password-form {
-        padding: 30px 20px;
+        padding: 30px 25px;
     }
     
     .password-title {
         font-size: 1.8em;
+        letter-spacing: 1px;
     }
     
-    .password-input-group {
-        flex-direction: column;
+    .password-subtitle {
+        font-size: 1em;
     }
     
+    .password-field,
     .password-btn {
-        width: 100%;
-        padding: 15px;
+        padding: 12px 18px;
+        font-size: 14px;
     }
 }
 
