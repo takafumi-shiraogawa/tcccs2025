@@ -13,13 +13,36 @@
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet" type="text/css">
     <style>
         /* Force global scaling - inline to bypass cache */
-        html { font-size: 50% !important; }
+        html { font-size: 60% !important; }
         body { font-size: 1rem !important; line-height: 1.4 !important; }
         /* ナビゲーションのフォントサイズ強制適用 */
-        .navbar-brand { font-size: 14px !important; }
-        .navbar-nav > li > a { font-size: 14px !important; }
+        .navbar-brand { font-size: 1.4rem !important; }
+        .navbar-nav > li > a { font-size: 1.4rem !important; }
         /* バナーボタンのフォントサイズ強制適用 */
-        .bauhaus-btns .btn { font-size: 18px !important; }
+        .bauhaus-btns .btn { font-size: 1.4rem !important; }
+        /* 小さいテキストのサイズ調整 */
+        .bauhaus-note { font-size: 1.5em !important; }
+        .talk-time { font-size: 1.5em !important; }
+        .time-block { font-size: 1.6em !important; }
+        
+        /* モバイル端末でのレスポンシブフォントサイズ強制適用 */
+        @media (max-width: 767px) {
+            .navbar-brand { font-size: 1.0rem !important; letter-spacing: 0.1em !important; }
+            .navbar-nav > li > a { font-size: 1.0rem !important; }
+            .bauhaus-title { font-size: 1.7em !important; }
+            .bauhaus-subtitle { font-size: 1.0em !important; }
+            .bauhaus-desc { font-size: 1.0em !important; }
+            .btn, .btn-lg { font-size: 1.0rem !important; }
+            .session-title { font-size: 1.2em !important; }
+            .talk-time { font-size: 1.0em !important; }
+            .time-block { font-size: 1.1em !important; }
+            .talk-content h3 { font-size: 1.0em !important; }
+            .talk-content .speaker { font-size: 1.0em !important; }
+            .talk-content .title { font-size: 0.9em !important; }
+            .break-title { font-size: 1.2em !important; }
+            .bauhaus-note { font-size: 1.0em !important; }
+            #about h2 { font-size: 1.7em !important; }
+        }
     </style>
 </head>
 
@@ -212,7 +235,7 @@
           <div class="lunch-break">
             <div class="time-block">12:25-13:15</div>
             <div class="break-title">Lunch & Discussion</div>
-            <p class="bauhaus-note" style="font-size: 0.9em; margin-top: 10px; color: #666;">(Lunch boxes will be prepared)</p>
+            <p class="bauhaus-note" style="font-size: 1.4em; margin-top: 10px; color: #666;">(Lunch boxes will be prepared)</p>
           </div>
           <div class="session-block afternoon-session">
             <div class="session-header">
@@ -307,7 +330,7 @@ window.onload = function() {
     checkAuthentication();
     
     // Force scale the entire page
-    document.documentElement.style.fontSize = '50%';
+    document.documentElement.style.fontSize = '60%';
     document.body.style.transform = 'scale(0.9)';
     document.body.style.transformOrigin = 'top left';
     document.body.style.width = '111%';
@@ -315,17 +338,33 @@ window.onload = function() {
     
     // Force navigation font sizes
     const navbarBrand = document.querySelector('.navbar-brand');
-    if (navbarBrand) navbarBrand.style.fontSize = '14px';
+    if (navbarBrand) navbarBrand.style.fontSize = '1.4rem';
     
     const navLinks = document.querySelectorAll('.navbar-nav > li > a');
     navLinks.forEach(link => {
-        link.style.fontSize = '14px';
+        link.style.fontSize = '1.4rem';
     });
     
     // Force banner button font sizes
     const bannerBtns = document.querySelectorAll('.bauhaus-btns .btn');
     bannerBtns.forEach(btn => {
-        btn.style.fontSize = '18px';
+        btn.style.fontSize = '1.4rem';
+    });
+    
+    // Force small text sizes
+    const noteTexts = document.querySelectorAll('.bauhaus-note');
+    noteTexts.forEach(note => {
+        note.style.fontSize = '1.5em';
+    });
+    
+    const talkTimes = document.querySelectorAll('.talk-time');
+    talkTimes.forEach(time => {
+        time.style.fontSize = '1.5em';
+    });
+    
+    const timeBlocks = document.querySelectorAll('.time-block');
+    timeBlocks.forEach(block => {
+        block.style.fontSize = '1.6em';
     });
 };
 
@@ -378,6 +417,40 @@ $(document).ready(function() {
             return false;
         }
     });
+    
+    // フォントサイズ強制適用 - JavaScript
+    function applyFontSizes() {
+        // 基本設定
+        $('.bauhaus-note').css('font-size', '1.5em');
+        $('.talk-time').css('font-size', '1.5em');
+        $('.time-block').css('font-size', '1.6em');
+        $('.navbar-brand').css('font-size', '1.4rem');
+        $('.navbar-nav > li > a').css('font-size', '1.4rem');
+        $('.bauhaus-btns .btn').css('font-size', '1.4rem');
+        
+        // モバイル端末の場合
+        if (window.innerWidth <= 767) {
+            $('.navbar-brand').css({'font-size': '1.0rem', 'letter-spacing': '0.1em'});
+            $('.navbar-nav > li > a').css('font-size', '1.0rem');
+            $('.bauhaus-title').css('font-size', '1.7em');
+            $('.bauhaus-subtitle').css('font-size', '1.0em');
+            $('.bauhaus-desc').css('font-size', '1.0em');
+            $('.btn, .btn-lg').css('font-size', '1.0rem');
+            $('.session-title').css('font-size', '1.2em');
+            $('.talk-time').css('font-size', '1.0em');
+            $('.time-block').css('font-size', '1.1em');
+            $('.talk-content h3').css('font-size', '1.0em');
+            $('.talk-content .speaker').css('font-size', '1.0em');
+            $('.talk-content .title').css('font-size', '0.9em');
+            $('.break-title').css('font-size', '1.2em');
+            $('.bauhaus-note').css('font-size', '1.0em');
+            $('#about h2').css('font-size', '1.7em');
+        }
+    }
+    
+    // 初期適用とリサイズ時の適用
+    applyFontSizes();
+    $(window).resize(applyFontSizes);
     
     // Add clear authentication function (for debugging/testing)
     window.clearAuth = function() {

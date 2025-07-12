@@ -1,7 +1,7 @@
 /* FORCE RELOAD - Version 20250713-030 - Cache Buster */
 /* Global scaling optimized for proper display size */
 html {
-    font-size: 50%;
+    font-size: 60%;
 }
 
 body {
@@ -87,11 +87,11 @@ html {
 /* Enhanced Bauhaus Background Container with gradient */
 .bauhaus-bg {
     position: relative;
-    padding: 30px 0;
+    padding: 1.5rem 0;
     background: linear-gradient(135deg, #f7f5f2 0%, #f0ede8 100%);
     overflow: hidden;
     width: 100%;
-    box-shadow: inset 0 0 50px rgba(0,0,0,0.03);
+    box-shadow: inset 0 0 5rem rgba(0,0,0,0.03);
 }
 
 /* Allow header bauhaus background to show full-width lines */
@@ -117,33 +117,33 @@ header .bauhaus-bg {
     left: 0;
     width: 100vw;
     height: 0;
-    border-top: 3.5px solid #111;
+    border-top: 0.35rem solid #111;
     background: none;
     opacity: 1;
 }
 /* For bold lines (every 4th line) */
 .bauhaus-lines-regular .line.bold {
-    border-top-width: 7px;
+    border-top-width: 0.7rem;
 }
 
 /* Enhanced text readability background for Bauhaus sections */
 .bauhaus-text-bg {
   background: rgba(255, 255, 255, 0.92);
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08);
-  padding: 25px 25px 25px 25px;
-  margin: 0 auto 60px auto;
-  max-width: 700px;
+  border-radius: 1.6rem;
+  box-shadow: 0 0.8rem 3.2rem rgba(0,0,0,0.12), 0 0.2rem 0.8rem rgba(0,0,0,0.08);
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+  margin: 0 auto 3rem auto;
+  max-width: 70rem;
   position: relative;
   z-index: 10;
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(1.2rem);
+  border: 0.1rem solid rgba(255,255,255,0.2);
   transition: all 0.3s ease;
 }
 
 .bauhaus-text-bg:hover {
-  box-shadow: 0 12px 40px rgba(0,0,0,0.15), 0 4px 12px rgba(0,0,0,0.1);
-  transform: translateY(-2px);
+  box-shadow: 0 1.2rem 4rem rgba(0,0,0,0.15), 0 0.4rem 1.2rem rgba(0,0,0,0.1);
+  transform: translateY(-0.2rem);
 }
 /* Bauhaus Design System */
 * {
@@ -152,7 +152,7 @@ header .bauhaus-bg {
 
 body {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color: #1a1a1a;
     background: linear-gradient(135deg, #f5f5dc 0%, #f0f0e8 50%, #f5f5dc 100%);
@@ -168,11 +168,11 @@ body {
     background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
     border-radius: 0;
     margin-bottom: 0;
-    min-height: 32px;
+    min-height: 3.2rem;
     position: relative;
     display: block;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 0.4rem 2rem rgba(0,0,0,0.15);
+    backdrop-filter: blur(1rem);
 }
 
 .navbar-fixed-top {
@@ -191,16 +191,16 @@ body {
 
 .navbar-brand {
     float: left;
-    height: 32px;
-    padding: 8px 15px;
-    font-size: 14px;
-    line-height: 16px;
+    height: 3.2rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
     text-decoration: none;
     color: #fff !important;
     font-weight: 900;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.15em;
     transition: all 0.3s ease;
 }
 
@@ -221,21 +221,21 @@ body {
 }
 
 .navbar-nav > li > a {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    line-height: 16px;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    line-height: 1.6rem;
     color: #fff !important;
     text-decoration: none;
     display: block;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     position: relative;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 .navbar-nav > li > a::before {
@@ -244,7 +244,7 @@ body {
     bottom: 0;
     left: 50%;
     width: 0;
-    height: 2px;
+    height: 0.2rem;
     background: #ffcc00;
     transition: all 0.3s ease;
     transform: translateX(-50%);
@@ -261,22 +261,22 @@ body {
 }
 
 .container {
-    padding: 0 10.5px;
+    padding: 0 1.05rem;
     margin: 0 auto;
-    max-width: 819px;
+    max-width: 81.9rem;
 }
 
 /* Mobile toggle button - Bauhaus style */
 .navbar-toggle {
     position: relative;
     float: right;
-    padding: 8.4px 10.5px;
-    margin-top: 8px;
-    margin-right: 14px;
-    margin-bottom: 8px;
+    padding: 0.84rem 1.05rem;
+    margin-top: 0.8rem;
+    margin-right: 1.4rem;
+    margin-bottom: 0.8rem;
     background: #fff;
     background-image: none;
-    border: 1.4px solid #000;
+    border: 0.14rem solid #000;
     border-radius: 0;
     display: none;
     box-shadow: none;
@@ -284,11 +284,11 @@ body {
 
 .icon-bar {
     display: block;
-    width: 17.5px;
-    height: 2.1px;
+    width: 1.75rem;
+    height: 0.21rem;
     border-radius: 0;
     background-color: #000;
-    margin: 3.5px 0;
+    margin: 0.35rem 0;
     transition: all 0.3s ease;
 }
 
@@ -315,8 +315,8 @@ body {
 header {
     background: linear-gradient(135deg, #f5f5dc 0%, #f0ede8 50%, #f5f5dc 100%);
     color: #1a1a1a;
-    padding-top: 30px;
-    padding-bottom: 25px;
+    padding-top: 20px;
+    padding-bottom: 15px;
     text-align: center;
     position: relative;
     overflow: visible;
@@ -333,20 +333,20 @@ header::before {
     position: absolute;
     top: 12%;
     right: 8%;
-    width: 200px;
-    height: 200px;
+    width: 34rem;
+    height: 34rem;
     background: linear-gradient(135deg, #ffcc00 0%, #ffd633 100%);
     border-radius: 50%;
     z-index: 1;
     opacity: 0.95;
     border: none;
     animation: float 6s ease-in-out infinite;
-    box-shadow: 0 10px 30px rgba(255,204,0,0.2);
+    box-shadow: 0 1.7rem 5.1rem rgba(255,204,0,0.2);
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-10px) rotate(2deg); }
+    0%, 100% { transform: translateY(0rem) rotate(0deg); }
+    50% { transform: translateY(-1rem) rotate(2deg); }
 }
 
 header::after {
@@ -354,15 +354,15 @@ header::after {
     position: absolute;
     bottom: 18%;
     left: 8%;
-    width: 180px;
-    height: 180px;
+    width: 30.6rem;
+    height: 30.6rem;
     background: linear-gradient(135deg, #e30613 0%, #ff1a2e 100%);
     z-index: 1;
     opacity: 0.95;
     border: none;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     animation: pulse 4s ease-in-out infinite;
-    box-shadow: 0 10px 30px rgba(227,6,19,0.2);
+    box-shadow: 0 1.7rem 5.1rem rgba(227,6,19,0.2);
 }
 
 @keyframes pulse {
@@ -402,9 +402,9 @@ header .container::after {
 /* Enhanced buttons with modern Bauhaus style */
 .btn {
     display: inline-block;
-    padding: 14px 35px;
-    margin: 10px;
-    font-size: 14px;
+    padding: 1.4rem 3.5rem;
+    margin: 1rem;
+    font-size: 1.4rem;
     font-weight: 600;
     line-height: 1.4;
     text-align: center;
@@ -415,24 +415,24 @@ header .container::after {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.12em;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
-    border-radius: 6px;
+    border-radius: 0.6rem;
 }
 
 .btn-lg {
-    padding: 18px 45px;
-    font-size: 18px;
+    padding: 1.8rem 4.5rem;
+    font-size: 1.4rem;
 }
 
 .btn-outline {
     background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
     color: #1a1a1a;
-    border: 3px solid #1a1a1a;
+    border: 0.3rem solid #1a1a1a;
     position: relative;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0.4rem 1.5rem rgba(0,0,0,0.1);
 }
 
 .btn-outline::before {
@@ -450,8 +450,8 @@ header .container::after {
 .btn-outline:hover {
     color: #fff;
     border-color: #e30613;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(227,6,19,0.3);
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.8rem 2.5rem rgba(227,6,19,0.3);
 }
 
 .btn-outline:hover::before {
@@ -470,7 +470,7 @@ header .container::after {
 
 /* Clean About Section - inspired by Bauhaus posters */
 #about {
-    padding: 25px 0;
+    padding: 15px 0;
     background: #f5f5dc;
     position: relative;
     overflow: hidden;
@@ -553,7 +553,7 @@ header .container::after {
     color: #1a1a1a;
     text-transform: uppercase;
     letter-spacing: -1px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     position: relative;
     z-index: 3;
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -583,7 +583,7 @@ header .container::after {
 /* Clean Program Section - Bauhaus style */
 .bauhaus-section {
     background: #f5f5dc;
-    padding: 25px 0;
+    padding: 15px 0;
     position: relative;
     overflow: hidden;
     z-index: 2;
@@ -703,7 +703,7 @@ header .container::after {
     color: #1a1a1a;
     text-transform: uppercase;
     letter-spacing: -1px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     position: relative;
     z-index: 3;
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -716,22 +716,22 @@ header .container::after {
 }
 
 .bauhaus-divider {
-    width: 140px;
-    height: 8px;
+    width: 14rem;
+    height: 0.8rem;
     background: linear-gradient(135deg, #e30613 0%, #ff1a2e 100%);
-    margin: 0 auto 60px;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(227,6,19,0.3);
+    margin: 0 auto 3rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.2rem 0.8rem rgba(227,6,19,0.3);
     transition: all 0.3s ease;
 }
 
 .bauhaus-divider:hover {
     transform: scaleX(1.1);
-    box-shadow: 0 4px 12px rgba(227,6,19,0.4);
+    box-shadow: 0 0.4rem 1.2rem rgba(227,6,19,0.4);
 }
 
 .program-schedule {
-    max-width: 1000px;
+    max-width: 100rem;
     margin: 0 auto;
     position: relative;
     z-index: 10;
@@ -739,10 +739,10 @@ header .container::after {
 
 /* Enhanced session blocks with modern styling */
 .session-block {
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
     background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
+    border-radius: 1.2rem;
+    box-shadow: 0 0.8rem 2.5rem rgba(0,0,0,0.08), 0 0.2rem 0.8rem rgba(0,0,0,0.04);
     overflow: hidden;
     position: relative;
     border: none;
@@ -751,8 +751,8 @@ header .container::after {
 }
 
 .session-block:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12), 0 5px 15px rgba(0,0,0,0.08);
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1.5rem 3.5rem rgba(0,0,0,0.12), 0 0.5rem 1.5rem rgba(0,0,0,0.08);
 }
 
 .morning-session::before {
@@ -761,7 +761,7 @@ header .container::after {
     left: 0;
     top: 0;
     bottom: 0;
-    width: 6px;
+    width: 0.6rem;
     background: #e30613;
 }
 
@@ -771,14 +771,14 @@ header .container::after {
     left: 0;
     top: 0;
     bottom: 0;
-    width: 6px;
+    width: 0.6rem;
     background: #0066cc;
 }
 
 .session-header {
     background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
     color: white;
-    padding: 20px 30px;
+    padding: 2rem 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -804,20 +804,20 @@ header .container::after {
 .time-block {
     background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
     color: #1a1a1a;
-    padding: 12px 22px;
-    border-radius: 25px;
+    padding: 1.2rem 2.2rem;
+    border-radius: 2.5rem;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.1em;
-    letter-spacing: 1px;
-    border: 2px solid rgba(255,255,255,0.2);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-size: 1.6em;
+    letter-spacing: 0.1em;
+    border: 0.2rem solid rgba(255,255,255,0.2);
+    box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.15);
     transition: all 0.3s ease;
 }
 
 .time-block:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.6rem 1.6rem rgba(0,0,0,0.2);
 }
 
 .session-title {
@@ -825,7 +825,7 @@ header .container::after {
     font-weight: 700;
     font-size: 1.8em;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.2em;
 }
 
 .talk-grid {
@@ -836,8 +836,8 @@ header .container::after {
 .talk-item,
 .break-item,
 .poster-session {
-    border-bottom: 1px solid #e0e0e0;
-    padding: 15px 20px;
+    border-bottom: 0.1rem solid #e0e0e0;
+    padding: 1.5rem 2rem;
     display: flex;
     align-items: flex-start;
     transition: all 0.3s ease;
@@ -856,7 +856,7 @@ header .container::after {
 
 .talk-item.keynote {
     background: #fff5f5;
-    border-left: 4px solid #e30613;
+    border-left: 0.4rem solid #e30613;
 }
 
 .break-item {
@@ -869,22 +869,22 @@ header .container::after {
 
 .poster-session {
     background: #f0f8ff;
-    border-left: 4px solid #0066cc;
+    border-left: 0.4rem solid #0066cc;
 }
 
 .talk-time {
     background: #000;
     color: white;
-    padding: 8px 12px;
+    padding: 0.8rem 1.2rem;
     border-radius: 0;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.0em;
-    min-width: 100px;
+    font-size: 1.5em;
+    min-width: 10rem;
     text-align: center;
-    margin-right: 25px;
+    margin-right: 2.5rem;
     flex-shrink: 0;
-    border: 2px solid #000;
+    border: 0.2rem solid #000;
 }
 
 .talk-content {
@@ -896,17 +896,17 @@ header .container::after {
     color: #000;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    margin: 0 0 8px 0;
+    margin: 0 0 0.8rem 0;
     font-size: 1.3em;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
     text-align: center;
 }
 
 .talk-content .speaker {
     color: #0066cc;
     font-weight: 600;
-    margin: 5px 0;
+    margin: 0.5rem 0;
     font-size: 1.4em;
     text-align: center;
 }
@@ -914,7 +914,7 @@ header .container::after {
 .talk-content .title {
     color: #333;
     font-style: italic;
-    margin: 5px 0 0 0;
+    margin: 0.5rem 0 0 0;
     line-height: 1.4;
     text-align: center;
     font-size: 1.3em;
@@ -924,16 +924,16 @@ header .container::after {
 .lunch-break {
     background: linear-gradient(135deg, #ffcc00 0%, #ffd633 100%);
     color: #1a1a1a;
-    padding: 20px;
+    padding: 2rem;
     text-align: center;
-    margin: 25px 0;
-    border-radius: 12px;
+    margin: 1.5rem 0;
+    border-radius: 1.2rem;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    box-shadow: 0 12px 30px rgba(255, 204, 0, 0.25), 0 4px 12px rgba(255, 204, 0, 0.15);
+    gap: 2rem;
+    box-shadow: 0 1.2rem 3rem rgba(255, 204, 0, 0.25), 0 0.4rem 1.2rem rgba(255, 204, 0, 0.15);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
@@ -956,16 +956,16 @@ header .container::after {
 }
 
 .lunch-break:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 16px 40px rgba(255, 204, 0, 0.3), 0 6px 16px rgba(255, 204, 0, 0.2);
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1.6rem 4rem rgba(255, 204, 0, 0.3), 0 0.6rem 1.6rem rgba(255, 204, 0, 0.2);
 }
 
 .lunch-break .time-block {
     background: #000;
     color: #fff;
     border: none;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 2rem;
+    box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.15);
 }
 
 .break-title {
@@ -973,7 +973,7 @@ header .container::after {
     font-weight: 700;
     font-size: 1.8em;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.2em;
 }
 
 
@@ -1023,24 +1023,24 @@ header .container::after {
     .navbar-collapse {
         display: none;
         background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
-        margin-top: 10px;
-        border-radius: 8px;
-        border: 2px solid rgba(255,204,0,0.3);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        margin-top: 1rem;
+        border-radius: 0.8rem;
+        border: 0.2rem solid rgba(255,204,0,0.3);
+        backdrop-filter: blur(1rem);
+        box-shadow: 0 0.8rem 2.5rem rgba(0,0,0,0.2);
     }
     
     .navbar-nav { float: none; margin: 0; }
     .navbar-nav > li { float: none; }
     .navbar-nav > li > a {
-        padding: 18px;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding: 1.8rem;
+        border-bottom: 0.1rem solid rgba(255,255,255,0.1);
         transition: all 0.3s ease;
-        font-size: 14px;
+        font-size: 1.0rem;
     }
     .navbar-nav > li > a:hover {
         background: rgba(255,204,0,0.1);
-        transform: translateX(5px);
+        transform: translateX(0.5rem);
     }
     .navbar-nav > li:last-child > a { border-bottom: none; }
     
@@ -1048,64 +1048,136 @@ header .container::after {
     .col-lg-offset-2 { margin-left: 0; }
     
     header { 
-        padding: 40px 0 30px; 
+        padding: 4rem 0 3rem; 
         min-height: 40vh;
     }
     
+    /* レスポンシブフォントサイズ - すべてのテキスト要素を統一 */
     #about h2 { 
-        font-size: 1.4em; 
-        letter-spacing: 0px; 
+        font-size: 1.7em; 
+        letter-spacing: 0rem; 
     }
     
     .bauhaus-title { 
-        font-size: 1.4em; 
-        letter-spacing: -1px; 
+        font-size: 1.7em; 
+        letter-spacing: -0.1rem; 
+    }
+    
+    .bauhaus-subtitle {
+        font-size: 1.0em;
+        letter-spacing: 0.05em;
+    }
+    
+    .bauhaus-desc {
+        font-size: 1.0em;
+        line-height: 1.4;
+    }
+    
+    .bauhaus-block h4 {
+        font-size: 1.3em;
+        letter-spacing: 0.05em;
+    }
+    
+    .bauhaus-block p {
+        font-size: 1.1em;
+    }
+    
+    .btn {
+        font-size: 1.0rem;
+        padding: 1rem 2rem;
+        letter-spacing: 0.08em;
+    }
+    
+    .btn-lg {
+        font-size: 1.0rem;
+        padding: 1.2rem 2.5rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.0rem;
+        letter-spacing: 0.1em;
+    }
+    
+    .session-title {
+        font-size: 1.2em;
+        letter-spacing: 1px;
     }
     
     .session-header { 
         flex-direction: column; 
         text-align: center; 
-        gap: 18px; 
-        padding: 25px 20px;
+        gap: 1.8rem; 
+        padding: 2.5rem 2rem;
     }
     
     .talk-item, .break-item, .poster-session { 
         flex-direction: column; 
         text-align: center; 
-        padding: 25px; 
+        padding: 2.5rem; 
     }
     
     .talk-time { 
-        margin: 0 0 18px 0; 
-        align-self: center; 
+        margin: 0 0 1.8rem 0; 
+        align-self: center;
+        font-size: 1.0em;
+    }
+    
+    .time-block {
+        font-size: 1.1em;
+        padding: 0.8rem 1.5rem;
+        letter-spacing: 0.05em;
+    }
+    
+    .talk-content h3 {
+        font-size: 1.0em;
+        letter-spacing: 0.05em;
+    }
+    
+    .talk-content .speaker {
+        font-size: 1.0em;
+    }
+    
+    .talk-content .title {
+        font-size: 0.9em;
+        line-height: 1.3;
+    }
+    
+    .break-title {
+        font-size: 1.2em;
+        letter-spacing: 0.1em;
+    }
+    
+    .bauhaus-note {
+        font-size: 1.0em;
+        padding: 1.2rem 1.5rem;
     }
     
     .lunch-break { 
         flex-direction: column; 
-        gap: 18px; 
-        padding: 25px 20px;
+        gap: 1.8rem; 
+        padding: 2.5rem 2rem;
     }
     
     .program-schedule { 
-        margin: 0 15px; 
+        margin: 0 1.5rem; 
     }
     
     .bauhaus-text-bg {
-        margin: 0 15px 60px 15px;
-        padding: 30px 25px;
+        margin: 0 1.5rem 6rem 1.5rem;
+        padding: 3rem 2.5rem;
     }
     
     /* Mobile geometric elements scaling */
     header::before {
-        width: 120px;
-        height: 120px;
+        width: 20.4rem;
+        height: 20.4rem;
         top: 15%;
         right: 5%;
     }
     
     header::after {
-        width: 100px;
-        height: 100px;
+        width: 17rem;
+        height: 17rem;
         bottom: 20%;
         left: 5%;
     }
@@ -1134,9 +1206,9 @@ header .container::after {
 }
 
 .bauhaus-block {
-    margin: 25px 0;
-    padding: 20px 0;
-    border-top: 2px solid #e0e0e0;
+    margin: 2.5rem 0;
+    padding: 2rem 0;
+    border-top: 0.2rem solid #e0e0e0;
 }
 
 .bauhaus-block:first-of-type {
@@ -1146,11 +1218,18 @@ header .container::after {
 .bauhaus-block h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #000;
-    margin: 0 0 10px 0;
+    margin: 0 0 1rem 0;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
+}
+
+.bauhaus-block p {
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: #333;
+    margin: 0.5rem 0;
 }
 
 .bauhaus-email {
@@ -1160,10 +1239,10 @@ header .container::after {
 
 .bauhaus-note {
     background: #f8f8f8;
-    padding: 15px 20px;
-    margin: 20px 0;
-    border-left: 4px solid #ffcc00;
-    font-size: 0.95em;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border-left: 0.4rem solid #ffcc00;
+    font-size: 1.5em;
     line-height: 1.5;
 }
 
