@@ -9,7 +9,7 @@
     <title>TCCCS 2025</title>
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="style.css?v=20250713030&t=1720857600">
+    <link rel="stylesheet" href="style.css?v=20250713033&t=1720857603">
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet" type="text/css">
     <style>
         /* Force global scaling - inline to bypass cache */
@@ -24,6 +24,17 @@
         .bauhaus-note { font-size: 1.5em !important; }
         .talk-time { font-size: 1.5em !important; }
         .time-block { font-size: 1.6em !important; }
+        /* すべてのテキスト要素を確実に相対サイズに */
+        strong, em, b, i, span { font-size: 1em !important; }
+        .bauhaus-block p { font-size: 1.4em !important; }
+        .bauhaus-block p strong { font-size: 1em !important; }
+        .bauhaus-block h4 { font-size: 1.8em !important; }
+        .bauhaus-desc { font-size: 1.4em !important; }
+        .bauhaus-subtitle { font-size: 1.8em !important; }
+        /* スピーカー名を相対的に大きく */
+        .talk-content .speaker { font-size: 1.6em !important; }
+        /* 発表タイトルも大きく */
+        .talk-content .title { font-size: 1.5em !important; }
         
         /* モバイル端末でのレスポンシブフォントサイズ強制適用 */
         @media (max-width: 767px) {
@@ -42,6 +53,17 @@
             .break-title { font-size: 1.2em !important; }
             .bauhaus-note { font-size: 1.0em !important; }
             #about h2 { font-size: 1.7em !important; }
+            /* すべてのテキスト要素をモバイルでも相対サイズに */
+            strong, em, b, i, span { font-size: 1em !important; }
+            .bauhaus-block p { font-size: 1.1em !important; }
+            .bauhaus-block p strong { font-size: 1em !important; }
+            .bauhaus-block h4 { font-size: 1.3em !important; }
+            .bauhaus-desc { font-size: 1.0em !important; }
+            .bauhaus-subtitle { font-size: 1.0em !important; }
+            /* スピーカー名をモバイルでも相対的に大きく */
+            .talk-content .speaker { font-size: 1.2em !important; }
+            /* 発表タイトルもモバイルで大きく */
+            .talk-content .title { font-size: 1.1em !important; }
         }
     </style>
 </head>
