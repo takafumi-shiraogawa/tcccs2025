@@ -1,20 +1,96 @@
-/* Global scaling to 50% */
+/* Enhanced loading animation and page transitions */
+body {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Stagger animation for sections */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideInUp 0.8s ease-out forwards;
+}
+
+section:nth-child(1) { animation-delay: 0.1s; }
+section:nth-child(2) { animation-delay: 0.3s; }
+section:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced hover effects for interactive elements */
+.bauhaus-text-bg {
+    position: relative;
+    z-index: 10;
+}
+
+/* Text selection styling */
+::selection {
+    background: rgba(227, 6, 19, 0.2);
+    color: #1a1a1a;
+}
+
+::-moz-selection {
+    background: rgba(227, 6, 19, 0.2);
+    color: #1a1a1a;
+}
+
+/* Focus states for accessibility */
+*:focus {
+    outline: 2px solid #ffcc00;
+    outline-offset: 2px;
+}
+
+/* Smooth scrolling behavior */
 html {
-    font-size: 50%;
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #e30613 0%, #ff1a2e 100%);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #ff1a2e 0%, #e30613 100%);
+}
+
+/* Global scaling optimized for better readability */
+html {
+    font-size: 55%;
 }
 
 body {
     font-size: 1rem;
-    line-height: 1.2;
+    line-height: 1.4;
 }
 
-/* Bauhaus Background Container */
+/* Enhanced Bauhaus Background Container with gradient */
 .bauhaus-bg {
     position: relative;
-    padding: 20px 0;
-    background-color: #f7f5f2;
+    padding: 30px 0;
+    background: linear-gradient(135deg, #f7f5f2 0%, #f0ede8 100%);
     overflow: hidden;
     width: 100%;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.03);
 }
 
 /* Allow header bauhaus background to show full-width lines */
@@ -49,17 +125,24 @@ header .bauhaus-bg {
     border-top-width: 7px;
 }
 
-/* Text readability background for Bauhaus sections */
+/* Enhanced text readability background for Bauhaus sections */
 .bauhaus-text-bg {
-  background: rgba(255, 255, 255, 0.80);
-  border-radius: 12.6px;
-  box-shadow: 0 2.8px 22.4px rgba(0,0,0,0.08);
-  padding: 15px 15px 15px 15px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08);
+  padding: 25px 25px 25px 25px;
   margin: 0 auto 60px auto;
-  max-width: 630px;
+  max-width: 700px;
   position: relative;
   z-index: 10;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+}
+
+.bauhaus-text-bg:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15), 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
 }
 /* Bauhaus Design System */
 * {
@@ -69,24 +152,26 @@ header .bauhaus-bg {
 body {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-size: 16px;
-    line-height: 1.6;
-    color: #000;
-    background-color: #f5f5dc;
+    line-height: 1.7;
+    color: #1a1a1a;
+    background: linear-gradient(135deg, #f5f5dc 0%, #f0f0e8 50%, #f5f5dc 100%);
     margin: 0;
     padding: 0;
     font-weight: 400;
+    min-height: 100vh;
 }
 
-/* Bauhaus Navigation */
+/* Enhanced Bauhaus Navigation with modern styling */
 .navbar {
     border: none;
-    background: #000;
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
     border-radius: 0;
     margin-bottom: 0;
-    min-height: 41px;
+    min-height: 45px;
     position: relative;
     display: block;
-    box-shadow: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
 }
 
 .navbar-fixed-top {
@@ -95,25 +180,32 @@ body {
     left: 0;
     z-index: 1030;
     top: 0;
+    border-bottom: 2px solid rgba(255,204,0,0.3);
 }
 
 .navbar-default {
-    background: #000;
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
     border: none;
 }
 
 .navbar-brand {
     float: left;
-    height: 41px;
-    padding: 10px 17.5px;
-    font-size: 16.8px;
+    height: 45px;
+    padding: 12px 20px;
+    font-size: 18px;
     line-height: 21px;
     text-decoration: none;
     color: #fff !important;
     font-weight: 900;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 2.1px;
+    letter-spacing: 2.5px;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #ffcc00 !important;
+    text-shadow: 0 0 10px rgba(255,204,0,0.5);
 }
 
 .navbar-nav {
@@ -128,25 +220,42 @@ body {
 }
 
 .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     line-height: 21px;
     color: #fff !important;
     text-decoration: none;
     display: block;
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    letter-spacing: 0.7px;
+    letter-spacing: 0.8px;
     text-transform: uppercase;
     position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-nav > li > a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #ffcc00;
     transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
 .navbar-nav > li > a:hover {
     color: #fff !important;
-    background: #e30613;
+    background: transparent;
+    transform: translateY(-1px);
+}
+
+.navbar-nav > li > a:hover::before {
+    width: 80%;
 }
 
 .container {
@@ -200,22 +309,23 @@ body {
     border: 0;
 }
 
-/* Clean Bauhaus Header - inspired by poster designs */
+/* Enhanced Clean Bauhaus Header */
 header {
-    background: #f5f5dc;
-    color: #000;
-    padding-top: 20px;
-    padding-bottom: 15px;
+    background: linear-gradient(135deg, #f5f5dc 0%, #f0ede8 50%, #f5f5dc 100%);
+    color: #1a1a1a;
+    padding-top: 30px;
+    padding-bottom: 25px;
     text-align: center;
     position: relative;
     overflow: visible;
     z-index: 2;
-    min-height: 60vh;
+    min-height: 65vh;
     display: flex;
     align-items: center;
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.03);
 }
 
-/* Large geometric elements inspired by Bauhaus posters */
+/* Enhanced large geometric elements with subtle animations */
 header::before {
     content: '';
     position: absolute;
@@ -223,11 +333,18 @@ header::before {
     right: 8%;
     width: 427px;
     height: 427px;
-    background: #ffcc00;
+    background: linear-gradient(135deg, #ffcc00 0%, #ffd633 100%);
     border-radius: 50%;
     z-index: 1;
-    opacity: 1.0;
+    opacity: 0.95;
     border: none;
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 10px 30px rgba(255,204,0,0.2);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
 }
 
 header::after {
@@ -237,11 +354,18 @@ header::after {
     left: 8%;
     width: 400px;
     height: 400px;
-    background: #e30613;
+    background: linear-gradient(135deg, #e30613 0%, #ff1a2e 100%);
     z-index: 1;
-    opacity: 1.0;
+    opacity: 0.95;
     border: none;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: pulse 4s ease-in-out infinite;
+    box-shadow: 0 10px 30px rgba(227,6,19,0.2);
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
 }
 
 /* Additional large header shapes */
@@ -273,11 +397,11 @@ header .container::after {
     clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 }
 
-/* Bauhaus Buttons */
+/* Enhanced buttons with modern Bauhaus style */
 .btn {
     display: inline-block;
-    padding: 12px 30px;
-    margin: 8px;
+    padding: 14px 35px;
+    margin: 10px;
     font-size: 14px;
     font-weight: 600;
     line-height: 1.4;
@@ -289,22 +413,24 @@ header .container::after {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
+    letter-spacing: 1.2px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    border-radius: 6px;
 }
 
 .btn-lg {
-    padding: 15px 40px;
+    padding: 18px 45px;
     font-size: 16px;
 }
 
 .btn-outline {
-    background: #fff;
-    color: #000;
-    border: 3px solid #000;
+    background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
+    color: #1a1a1a;
+    border: 3px solid #1a1a1a;
     position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .btn-outline::before {
@@ -314,14 +440,16 @@ header .container::after {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: #e30613;
-    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #e30613 0%, #ff1a2e 100%);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: -1;
 }
 
 .btn-outline:hover {
     color: #fff;
     border-color: #e30613;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(227,6,19,0.3);
 }
 
 .btn-outline:hover::before {
@@ -419,20 +547,21 @@ header .container::after {
 #about h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: 4.5em;
-    color: #000;
+    font-size: 4.8em;
+    color: #1a1a1a;
     text-transform: uppercase;
-    letter-spacing: -2px;
-    margin-bottom: 25px;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
     position: relative;
     z-index: 3;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 #about p {
-    font-size: 1.3em;
+    font-size: 1.4em;
     line-height: 1.8;
-    color: #000;
-    max-width: 800px;
+    color: #2a2a2a;
+    max-width: 850px;
     margin: 0 auto;
     position: relative;
     z-index: 3;
@@ -568,20 +697,35 @@ header .container::after {
 .bauhaus-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: 4.5em;
-    color: #000;
+    font-size: 4.8em;
+    color: #1a1a1a;
     text-transform: uppercase;
-    letter-spacing: -2px;
-    margin-bottom: 25px;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
     position: relative;
     z-index: 3;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.bauhaus-title:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .bauhaus-divider {
-    width: 120px;
-    height: 6px;
-    background: #e30613;
-    margin: 0 auto 50px;
+    width: 140px;
+    height: 8px;
+    background: linear-gradient(135deg, #e30613 0%, #ff1a2e 100%);
+    margin: 0 auto 60px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(227,6,19,0.3);
+    transition: all 0.3s ease;
+}
+
+.bauhaus-divider:hover {
+    transform: scaleX(1.1);
+    box-shadow: 0 4px 12px rgba(227,6,19,0.4);
 }
 
 .program-schedule {
@@ -591,21 +735,22 @@ header .container::after {
     z-index: 10;
 }
 
+/* Enhanced session blocks with modern styling */
 .session-block {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     background: #ffffff;
-    border-radius: 0;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
     overflow: hidden;
     position: relative;
     border: none;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 10;
 }
 
 .session-block:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12), 0 5px 15px rgba(0,0,0,0.08);
 }
 
 .morning-session::before {
@@ -629,25 +774,48 @@ header .container::after {
 }
 
 .session-header {
-    background: #000;
+    background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
     color: white;
-    padding: 15px 25px;
+    padding: 20px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.session-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.session-header:hover::before {
+    left: 100%;
 }
 
 .time-block {
-    background: #fff;
-    color: #000;
-    padding: 10px 18px;
-    border-radius: 20px;
+    background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
+    color: #1a1a1a;
+    padding: 12px 22px;
+    border-radius: 25px;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.9em;
+    font-size: 0.95em;
     letter-spacing: 1px;
-    border: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 2px solid rgba(255,255,255,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.time-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
 .session-title {
@@ -750,25 +918,44 @@ header .container::after {
     font-size: 1.1em;
 }
 
+/* Enhanced lunch break styling */
 .lunch-break {
-    background: #ffcc00;
-    color: #000;
-    padding: 15px;
+    background: linear-gradient(135deg, #ffcc00 0%, #ffd633 100%);
+    color: #1a1a1a;
+    padding: 20px;
     text-align: center;
-    margin: 20px 0;
-    border-radius: 0;
+    margin: 25px 0;
+    border-radius: 12px;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.2);
-    transition: all 0.3s ease;
+    gap: 20px;
+    box-shadow: 0 12px 30px rgba(255, 204, 0, 0.25), 0 4px 12px rgba(255, 204, 0, 0.15);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.lunch-break::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+    50% { transform: translate(-50%, -50%) rotate(180deg); }
 }
 
 .lunch-break:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 25px rgba(255, 204, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(255, 204, 0, 0.3), 0 6px 16px rgba(255, 204, 0, 0.2);
 }
 
 .lunch-break .time-block {
@@ -827,38 +1014,98 @@ header .container::after {
     }
 }
 
-/* Responsive Design */
+/* Enhanced responsive design with modern animations */
 @media (max-width: 767px) {
     .navbar-toggle { display: block; }
     
     .navbar-collapse {
         display: none;
-        background: #000;
+        background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
         margin-top: 10px;
-        border-radius: 0;
-        border: 2px solid #fff;
+        border-radius: 8px;
+        border: 2px solid rgba(255,204,0,0.3);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     }
     
     .navbar-nav { float: none; margin: 0; }
     .navbar-nav > li { float: none; }
     .navbar-nav > li > a {
-        padding: 15px;
-        border-bottom: 1px solid #333;
+        padding: 18px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        transition: all 0.3s ease;
+    }
+    .navbar-nav > li > a:hover {
+        background: rgba(255,204,0,0.1);
+        transform: translateX(5px);
     }
     .navbar-nav > li:last-child > a { border-bottom: none; }
     
     .col-lg-4, .col-lg-8, .col-lg-12 { width: 100%; margin-left: 0; }
     .col-lg-offset-2 { margin-left: 0; }
     
-    header { padding: 60px 0 40px; }
-    #about h2 { font-size: 2.5em; letter-spacing: 2px; }
-    .bauhaus-title { font-size: 2.5em; letter-spacing: 1px; }
+    header { 
+        padding: 80px 0 50px; 
+        min-height: 70vh;
+    }
     
-    .session-header { flex-direction: column; text-align: center; gap: 15px; }
-    .talk-item, .break-item, .poster-session { flex-direction: column; text-align: center; padding: 20px; }
-    .talk-time { margin: 0 0 15px 0; align-self: center; }
-    .lunch-break { flex-direction: column; gap: 15px; }
-    .program-schedule { margin: 0 15px; }
+    #about h2 { 
+        font-size: 3em; 
+        letter-spacing: 1px; 
+    }
+    
+    .bauhaus-title { 
+        font-size: 3em; 
+        letter-spacing: 0px; 
+    }
+    
+    .session-header { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 18px; 
+        padding: 25px 20px;
+    }
+    
+    .talk-item, .break-item, .poster-session { 
+        flex-direction: column; 
+        text-align: center; 
+        padding: 25px; 
+    }
+    
+    .talk-time { 
+        margin: 0 0 18px 0; 
+        align-self: center; 
+    }
+    
+    .lunch-break { 
+        flex-direction: column; 
+        gap: 18px; 
+        padding: 25px 20px;
+    }
+    
+    .program-schedule { 
+        margin: 0 15px; 
+    }
+    
+    .bauhaus-text-bg {
+        margin: 0 15px 60px 15px;
+        padding: 30px 25px;
+    }
+    
+    /* Mobile geometric elements scaling */
+    header::before {
+        width: 250px;
+        height: 250px;
+        top: 15%;
+        right: 5%;
+    }
+    
+    header::after {
+        width: 200px;
+        height: 200px;
+        bottom: 20%;
+        left: 5%;
+    }
 }
 
 /* Additional Bauhaus styles for content */
