@@ -9,11 +9,21 @@
     <title>TCCCS 2025</title>
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="style.css?v=2025071302">
+    <link rel="stylesheet" href="style.css?v=20250713030&t=1720857600">
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet" type="text/css">
+    <style>
+        /* Force global scaling - inline to bypass cache */
+        html { font-size: 50% !important; }
+        body { font-size: 1rem !important; line-height: 1.4 !important; }
+        /* ナビゲーションのフォントサイズ強制適用 */
+        .navbar-brand { font-size: 14px !important; }
+        .navbar-nav > li > a { font-size: 14px !important; }
+        /* バナーボタンのフォントサイズ強制適用 */
+        .bauhaus-btns .btn { font-size: 18px !important; }
+    </style>
 </head>
 
-<body id="page-top">
+<body id="page-top" style="transform: scale(0.9); transform-origin: top left; width: 111%; height: 111%;">
   <!-- Password Protection Overlay -->
   <div id="password-overlay" class="password-overlay">
     <div class="password-container">
@@ -295,6 +305,28 @@ function checkAuthentication() {
 // Initialize on page load
 window.onload = function() {
     checkAuthentication();
+    
+    // Force scale the entire page
+    document.documentElement.style.fontSize = '50%';
+    document.body.style.transform = 'scale(0.9)';
+    document.body.style.transformOrigin = 'top left';
+    document.body.style.width = '111%';
+    document.body.style.height = '111%';
+    
+    // Force navigation font sizes
+    const navbarBrand = document.querySelector('.navbar-brand');
+    if (navbarBrand) navbarBrand.style.fontSize = '14px';
+    
+    const navLinks = document.querySelectorAll('.navbar-nav > li > a');
+    navLinks.forEach(link => {
+        link.style.fontSize = '14px';
+    });
+    
+    // Force banner button font sizes
+    const bannerBtns = document.querySelectorAll('.bauhaus-btns .btn');
+    bannerBtns.forEach(btn => {
+        btn.style.fontSize = '18px';
+    });
 };
 
 // Allow Enter key to submit password

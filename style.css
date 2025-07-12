@@ -1,3 +1,14 @@
+/* FORCE RELOAD - Version 20250713-030 - Cache Buster */
+/* Global scaling optimized for proper display size */
+html {
+    font-size: 50%;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
 /* Enhanced loading animation and page transitions */
 body {
     opacity: 0;
@@ -71,16 +82,6 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, #ff1a2e 0%, #e30613 100%);
-}
-
-/* Global scaling optimized for proper display size */
-html {
-    font-size: 20%;
-}
-
-body {
-    font-size: 1rem;
-    line-height: 1.4;
 }
 
 /* Enhanced Bauhaus Background Container with gradient */
@@ -192,14 +193,14 @@ body {
     float: left;
     height: 32px;
     padding: 8px 15px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 16px;
     text-decoration: none;
     color: #fff !important;
     font-weight: 900;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1.8px;
+    letter-spacing: 1.5px;
     transition: all 0.3s ease;
 }
 
@@ -234,6 +235,7 @@ body {
     text-transform: uppercase;
     position: relative;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 14px;
 }
 
 .navbar-nav > li > a::before {
@@ -422,7 +424,7 @@ header .container::after {
 
 .btn-lg {
     padding: 18px 45px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .btn-outline {
@@ -547,7 +549,7 @@ header .container::after {
 #about h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: 3.36em;
+    font-size: 4.2em;
     color: #1a1a1a;
     text-transform: uppercase;
     letter-spacing: -1px;
@@ -558,7 +560,7 @@ header .container::after {
 }
 
 #about p {
-    font-size: 1.4em;
+    font-size: 1.8em;
     line-height: 1.8;
     color: #2a2a2a;
     max-width: 850px;
@@ -697,7 +699,7 @@ header .container::after {
 .bauhaus-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: 3.36em;
+    font-size: 4.2em;
     color: #1a1a1a;
     text-transform: uppercase;
     letter-spacing: -1px;
@@ -806,7 +808,7 @@ header .container::after {
     border-radius: 25px;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.95em;
+    font-size: 1.1em;
     letter-spacing: 1px;
     border: 2px solid rgba(255,255,255,0.2);
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -821,7 +823,7 @@ header .container::after {
 .session-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 1.4em;
+    font-size: 1.8em;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -877,7 +879,7 @@ header .container::after {
     border-radius: 0;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.85em;
+    font-size: 1.0em;
     min-width: 100px;
     text-align: center;
     margin-right: 25px;
@@ -895,7 +897,7 @@ header .container::after {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     margin: 0 0 8px 0;
-    font-size: 1.1em;
+    font-size: 1.3em;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
@@ -905,7 +907,7 @@ header .container::after {
     color: #0066cc;
     font-weight: 600;
     margin: 5px 0;
-    font-size: 1.2em;
+    font-size: 1.4em;
     text-align: center;
 }
 
@@ -915,7 +917,7 @@ header .container::after {
     margin: 5px 0 0 0;
     line-height: 1.4;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 /* Enhanced lunch break styling */
@@ -969,7 +971,7 @@ header .container::after {
 .break-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.8em;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -1034,6 +1036,7 @@ header .container::after {
         padding: 18px;
         border-bottom: 1px solid rgba(255,255,255,0.1);
         transition: all 0.3s ease;
+        font-size: 14px;
     }
     .navbar-nav > li > a:hover {
         background: rgba(255,204,0,0.1);
@@ -1050,12 +1053,12 @@ header .container::after {
     }
     
     #about h2 { 
-        font-size: 1.1em; 
+        font-size: 1.4em; 
         letter-spacing: 0px; 
     }
     
     .bauhaus-title { 
-        font-size: 1.1em; 
+        font-size: 1.4em; 
         letter-spacing: -1px; 
     }
     
@@ -1112,7 +1115,7 @@ header .container::after {
 .bauhaus-subtitle {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 1.4em;
+    font-size: 1.8em;
     color: #666;
     margin: 10px 0 20px 0;
     text-transform: uppercase;
@@ -1120,7 +1123,7 @@ header .container::after {
 }
 
 .bauhaus-desc {
-    font-size: 1.1em;
+    font-size: 1.4em;
     line-height: 1.6;
     color: #333;
     margin: 20px 0;
@@ -1143,7 +1146,7 @@ header .container::after {
 .bauhaus-block h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: #000;
     margin: 0 0 10px 0;
     text-transform: uppercase;
