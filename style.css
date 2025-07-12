@@ -1,7 +1,17 @@
+/* Global scaling to 70% */
+html {
+    font-size: 70%; /* Base font size reduction */
+}
+
+body {
+    font-size: 1rem; /* Use relative units */
+    line-height: 1.4; /* Slightly tighter line height */
+}
+
 /* Bauhaus Background Container */
 .bauhaus-bg {
     position: relative;
-    padding: 120px 0;
+    padding: 84px 0; /* 120px * 0.7 = 84px */
     background-color: #f7f5f2;
     overflow: hidden;
     width: 100%;
@@ -30,23 +40,23 @@ header .bauhaus-bg {
     left: 0;
     width: 100vw;
     height: 0;
-    border-top: 5px solid #111;
+    border-top: 3.5px solid #111; /* 5px * 0.7 = 3.5px */
     background: none;
     opacity: 1;
 }
 /* For bold lines (every 4th line) */
 .bauhaus-lines-regular .line.bold {
-    border-top-width: 10px;
+    border-top-width: 7px; /* 10px * 0.7 = 7px */
 }
 
 /* Text readability background for Bauhaus sections */
 .bauhaus-text-bg {
   background: rgba(255, 255, 255, 0.80);
-  border-radius: 18px;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
-  padding: 40px 32px 32px 32px;
-  margin: 0 auto 300px auto;
-  max-width: 900px;
+  border-radius: 12.6px; /* 18px * 0.7 = 12.6px */
+  box-shadow: 0 2.8px 22.4px rgba(0,0,0,0.08); /* 4px * 0.7, 32px * 0.7 */
+  padding: 28px 22.4px 22.4px 22.4px; /* 40px * 0.7, 32px * 0.7 */
+  margin: 0 auto 210px auto; /* 300px * 0.7 = 210px */
+  max-width: 630px; /* 900px * 0.7 = 630px */
   position: relative;
   z-index: 10;
   backdrop-filter: blur(8px);
@@ -73,7 +83,7 @@ body {
     background: #000;
     border-radius: 0;
     margin-bottom: 0;
-    min-height: 70px;
+    min-height: 41px; /* 49px → 41px (高さを狭める) */
     position: relative;
     display: block;
     box-shadow: none;
@@ -94,16 +104,16 @@ body {
 
 .navbar-brand {
     float: left;
-    height: 70px;
-    padding: 20px 25px;
-    font-size: 24px;
-    line-height: 30px;
+    height: 41px; /* 49px → 41px (高さを狭める) */
+    padding: 10px 17.5px; /* 14px → 10px (上下パディングを狭める) */
+    font-size: 16.8px; /* 24px * 0.7 = 16.8px */
+    line-height: 21px; /* 30px * 0.7 = 21px */
     text-decoration: none;
     color: #fff !important;
     font-weight: 900;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 2.1px; /* 3px * 0.7 = 2.1px */
 }
 
 .navbar-nav {
@@ -118,17 +128,17 @@ body {
 }
 
 .navbar-nav > li > a {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    line-height: 30px;
+    padding-top: 10px; /* 14px → 10px (上下間隔を狭める) */
+    padding-bottom: 10px; /* 14px → 10px (上下間隔を狭める) */
+    line-height: 21px; /* 30px * 0.7 = 21px */
     color: #fff !important;
     text-decoration: none;
     display: block;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 14px; /* 20px * 0.7 = 14px */
+    padding-right: 14px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0.7px; /* 1px * 0.7 = 0.7px */
     text-transform: uppercase;
     position: relative;
     transition: all 0.3s ease;
@@ -140,22 +150,22 @@ body {
 }
 
 .container {
-    padding: 0 15px;
+    padding: 0 10.5px; /* 15px * 0.7 = 10.5px */
     margin: 0 auto;
-    max-width: 1170px;
+    max-width: 819px; /* 1170px * 0.7 = 819px */
 }
 
 /* Mobile toggle button - Bauhaus style */
 .navbar-toggle {
     position: relative;
     float: right;
-    padding: 12px 15px;
-    margin-top: 18px;
-    margin-right: 20px;
-    margin-bottom: 18px;
+    padding: 8.4px 10.5px; /* 12px * 0.7 = 8.4px, 15px * 0.7 = 10.5px */
+    margin-top: 8px; /* 12.6px → 8px (上マージンを狭める) */
+    margin-right: 14px; /* 20px * 0.7 = 14px */
+    margin-bottom: 8px; /* 12.6px → 8px (下マージンを狭める) */
     background: #fff;
     background-image: none;
-    border: 2px solid #000;
+    border: 1.4px solid #000; /* 2px * 0.7 = 1.4px */
     border-radius: 0;
     display: none;
     box-shadow: none;
@@ -163,11 +173,11 @@ body {
 
 .icon-bar {
     display: block;
-    width: 25px;
-    height: 3px;
+    width: 17.5px; /* 25px * 0.7 = 17.5px */
+    height: 2.1px; /* 3px * 0.7 = 2.1px */
     border-radius: 0;
     background-color: #000;
-    margin: 5px 0;
+    margin: 3.5px 0; /* 5px * 0.7 = 3.5px */
     transition: all 0.3s ease;
 }
 
