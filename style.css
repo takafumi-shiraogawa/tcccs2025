@@ -1,17 +1,17 @@
-/* Global scaling to 70% */
+/* Global scaling to 50% */
 html {
-    font-size: 70%; /* Base font size reduction */
+    font-size: 50%;
 }
 
 body {
-    font-size: 1rem; /* Use relative units */
-    line-height: 1.4; /* Slightly tighter line height */
+    font-size: 1rem;
+    line-height: 1.2;
 }
 
 /* Bauhaus Background Container */
 .bauhaus-bg {
     position: relative;
-    padding: 84px 0; /* 120px * 0.7 = 84px */
+    padding: 20px 0;
     background-color: #f7f5f2;
     overflow: hidden;
     width: 100%;
@@ -40,23 +40,23 @@ header .bauhaus-bg {
     left: 0;
     width: 100vw;
     height: 0;
-    border-top: 3.5px solid #111; /* 5px * 0.7 = 3.5px */
+    border-top: 3.5px solid #111;
     background: none;
     opacity: 1;
 }
 /* For bold lines (every 4th line) */
 .bauhaus-lines-regular .line.bold {
-    border-top-width: 7px; /* 10px * 0.7 = 7px */
+    border-top-width: 7px;
 }
 
 /* Text readability background for Bauhaus sections */
 .bauhaus-text-bg {
   background: rgba(255, 255, 255, 0.80);
-  border-radius: 12.6px; /* 18px * 0.7 = 12.6px */
-  box-shadow: 0 2.8px 22.4px rgba(0,0,0,0.08); /* 4px * 0.7, 32px * 0.7 */
-  padding: 28px 22.4px 22.4px 22.4px; /* 40px * 0.7, 32px * 0.7 */
-  margin: 0 auto 210px auto; /* 300px * 0.7 = 210px */
-  max-width: 630px; /* 900px * 0.7 = 630px */
+  border-radius: 12.6px;
+  box-shadow: 0 2.8px 22.4px rgba(0,0,0,0.08);
+  padding: 15px 15px 15px 15px;
+  margin: 0 auto 60px auto;
+  max-width: 630px;
   position: relative;
   z-index: 10;
   backdrop-filter: blur(8px);
@@ -83,7 +83,7 @@ body {
     background: #000;
     border-radius: 0;
     margin-bottom: 0;
-    min-height: 41px; /* 49px → 41px (高さを狭める) */
+    min-height: 41px;
     position: relative;
     display: block;
     box-shadow: none;
@@ -104,16 +104,16 @@ body {
 
 .navbar-brand {
     float: left;
-    height: 41px; /* 49px → 41px (高さを狭める) */
-    padding: 10px 17.5px; /* 14px → 10px (上下パディングを狭める) */
-    font-size: 16.8px; /* 24px * 0.7 = 16.8px */
-    line-height: 21px; /* 30px * 0.7 = 21px */
+    height: 41px;
+    padding: 10px 17.5px;
+    font-size: 16.8px;
+    line-height: 21px;
     text-decoration: none;
     color: #fff !important;
     font-weight: 900;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 2.1px; /* 3px * 0.7 = 2.1px */
+    letter-spacing: 2.1px;
 }
 
 .navbar-nav {
@@ -128,17 +128,17 @@ body {
 }
 
 .navbar-nav > li > a {
-    padding-top: 10px; /* 14px → 10px (上下間隔を狭める) */
-    padding-bottom: 10px; /* 14px → 10px (上下間隔を狭める) */
-    line-height: 21px; /* 30px * 0.7 = 21px */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 21px;
     color: #fff !important;
     text-decoration: none;
     display: block;
-    padding-left: 14px; /* 20px * 0.7 = 14px */
+    padding-left: 14px;
     padding-right: 14px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    letter-spacing: 0.7px; /* 1px * 0.7 = 0.7px */
+    letter-spacing: 0.7px;
     text-transform: uppercase;
     position: relative;
     transition: all 0.3s ease;
@@ -150,22 +150,22 @@ body {
 }
 
 .container {
-    padding: 0 10.5px; /* 15px * 0.7 = 10.5px */
+    padding: 0 10.5px;
     margin: 0 auto;
-    max-width: 819px; /* 1170px * 0.7 = 819px */
+    max-width: 819px;
 }
 
 /* Mobile toggle button - Bauhaus style */
 .navbar-toggle {
     position: relative;
     float: right;
-    padding: 8.4px 10.5px; /* 12px * 0.7 = 8.4px, 15px * 0.7 = 10.5px */
-    margin-top: 8px; /* 12.6px → 8px (上マージンを狭める) */
-    margin-right: 14px; /* 20px * 0.7 = 14px */
-    margin-bottom: 8px; /* 12.6px → 8px (下マージンを狭める) */
+    padding: 8.4px 10.5px;
+    margin-top: 8px;
+    margin-right: 14px;
+    margin-bottom: 8px;
     background: #fff;
     background-image: none;
-    border: 1.4px solid #000; /* 2px * 0.7 = 1.4px */
+    border: 1.4px solid #000;
     border-radius: 0;
     display: none;
     box-shadow: none;
@@ -173,11 +173,11 @@ body {
 
 .icon-bar {
     display: block;
-    width: 17.5px; /* 25px * 0.7 = 17.5px */
-    height: 2.1px; /* 3px * 0.7 = 2.1px */
+    width: 17.5px;
+    height: 2.1px;
     border-radius: 0;
     background-color: #000;
-    margin: 3.5px 0; /* 5px * 0.7 = 3.5px */
+    margin: 3.5px 0;
     transition: all 0.3s ease;
 }
 
@@ -204,13 +204,13 @@ body {
 header {
     background: #f5f5dc;
     color: #000;
-    padding-top: 140px;
-    padding-bottom: 100px;
+    padding-top: 20px;
+    padding-bottom: 15px;
     text-align: center;
     position: relative;
     overflow: visible;
     z-index: 2;
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
 }
@@ -221,8 +221,8 @@ header::before {
     position: absolute;
     top: 12%;
     right: 8%;
-    width: 640px;
-    height: 640px;
+    width: 427px;
+    height: 427px;
     background: #ffcc00;
     border-radius: 50%;
     z-index: 1;
@@ -340,7 +340,7 @@ header .container::after {
 
 /* Clean About Section - inspired by Bauhaus posters */
 #about {
-    padding: 120px 0;
+    padding: 25px 0;
     background: #f5f5dc;
     position: relative;
     overflow: hidden;
@@ -423,7 +423,7 @@ header .container::after {
     color: #000;
     text-transform: uppercase;
     letter-spacing: -2px;
-    margin-bottom: 60px;
+    margin-bottom: 25px;
     position: relative;
     z-index: 3;
 }
@@ -452,7 +452,7 @@ header .container::after {
 /* Clean Program Section - Bauhaus style */
 .bauhaus-section {
     background: #f5f5dc;
-    padding: 120px 0;
+    padding: 25px 0;
     position: relative;
     overflow: hidden;
     z-index: 2;
@@ -572,7 +572,7 @@ header .container::after {
     color: #000;
     text-transform: uppercase;
     letter-spacing: -2px;
-    margin-bottom: 60px;
+    margin-bottom: 25px;
     position: relative;
     z-index: 3;
 }
@@ -592,7 +592,7 @@ header .container::after {
 }
 
 .session-block {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     background: #ffffff;
     border-radius: 0;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
@@ -631,7 +631,7 @@ header .container::after {
 .session-header {
     background: #000;
     color: white;
-    padding: 25px 35px;
+    padding: 15px 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -667,7 +667,7 @@ header .container::after {
 .break-item,
 .poster-session {
     border-bottom: 1px solid #e0e0e0;
-    padding: 25px 30px;
+    padding: 15px 20px;
     display: flex;
     align-items: flex-start;
     transition: all 0.3s ease;
@@ -753,15 +753,15 @@ header .container::after {
 .lunch-break {
     background: #ffcc00;
     color: #000;
-    padding: 35px;
+    padding: 15px;
     text-align: center;
-    margin: 50px 0;
+    margin: 20px 0;
     border-radius: 0;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 35px;
+    gap: 15px;
     box-shadow: 0 8px 20px rgba(255, 204, 0, 0.2);
     transition: all 0.3s ease;
 }
@@ -850,7 +850,7 @@ header .container::after {
     .col-lg-4, .col-lg-8, .col-lg-12 { width: 100%; margin-left: 0; }
     .col-lg-offset-2 { margin-left: 0; }
     
-    header { padding: 100px 0 60px; }
+    header { padding: 60px 0 40px; }
     #about h2 { font-size: 2.5em; letter-spacing: 2px; }
     .bauhaus-title { font-size: 2.5em; letter-spacing: 1px; }
     
