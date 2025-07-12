@@ -1,0 +1,1107 @@
+/* Bauhaus Background Container */
+.bauhaus-bg {
+    position: relative;
+    padding: 120px 0;
+    background-color: #f7f5f2;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Allow header bauhaus background to show full-width lines */
+header .bauhaus-bg {
+    overflow: visible;
+    width: 100%;
+    flex: 0 0 100%;
+}
+
+/* Bauhaus poster style: regular black horizontal lines */
+.bauhaus-lines-regular {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    margin-left: calc(-50vw + 50%);
+}
+.bauhaus-lines-regular .line {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    border-top: 5px solid #111;
+    background: none;
+    opacity: 1;
+}
+/* For bold lines (every 4th line) */
+.bauhaus-lines-regular .line.bold {
+    border-top-width: 10px;
+}
+
+/* Text readability background for Bauhaus sections */
+.bauhaus-text-bg {
+  background: rgba(255, 255, 255, 0.80);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  padding: 40px 32px 32px 32px;
+  margin: 0 auto 300px auto;
+  max-width: 900px;
+  position: relative;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+/* Bauhaus Design System */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000;
+    background-color: #f5f5dc;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+/* Bauhaus Navigation */
+.navbar {
+    border: none;
+    background: #000;
+    border-radius: 0;
+    margin-bottom: 0;
+    min-height: 70px;
+    position: relative;
+    display: block;
+    box-shadow: none;
+}
+
+.navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    top: 0;
+}
+
+.navbar-default {
+    background: #000;
+    border: none;
+}
+
+.navbar-brand {
+    float: left;
+    height: 70px;
+    padding: 20px 25px;
+    font-size: 24px;
+    line-height: 30px;
+    text-decoration: none;
+    color: #fff !important;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.navbar-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+}
+
+.navbar-nav > li {
+    float: left;
+}
+
+.navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 30px;
+    color: #fff !important;
+    text-decoration: none;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav > li > a:hover {
+    color: #fff !important;
+    background: #e30613;
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+/* Mobile toggle button - Bauhaus style */
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 12px 15px;
+    margin-top: 18px;
+    margin-right: 20px;
+    margin-bottom: 18px;
+    background: #fff;
+    background-image: none;
+    border: 2px solid #000;
+    border-radius: 0;
+    display: none;
+    box-shadow: none;
+}
+
+.icon-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 0;
+    background-color: #000;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggle:hover {
+    background: #e30613;
+}
+
+.navbar-toggle:hover .icon-bar {
+    background-color: #fff;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Clean Bauhaus Header - inspired by poster designs */
+header {
+    background: #f5f5dc;
+    color: #000;
+    padding-top: 140px;
+    padding-bottom: 100px;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Large geometric elements inspired by Bauhaus posters */
+header::before {
+    content: '';
+    position: absolute;
+    top: 12%;
+    right: 8%;
+    width: 640px;
+    height: 640px;
+    background: #ffcc00;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 1.0;
+    border: none;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 18%;
+    left: 8%;
+    width: 400px;
+    height: 400px;
+    background: #e30613;
+    z-index: 1;
+    opacity: 1.0;
+    border: none;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Additional large header shapes */
+header .container::before {
+    content: '';
+    position: absolute;
+    top: 8%;
+    left: 22%;
+    width: 120px;
+    height: 720px;
+    background: #000;
+    z-index: 1;
+    opacity: 1.0;
+    border: none;
+    transform: rotate(-5deg);
+}
+
+header .container::after {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
+    width: 360px;
+    height: 360px;
+    background: #0066cc;
+    z-index: 1;
+    opacity: 1.0;
+    border: none;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+/* Bauhaus Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-lg {
+    padding: 15px 40px;
+    font-size: 16px;
+}
+
+.btn-outline {
+    background: #fff;
+    color: #000;
+    border: 3px solid #000;
+    position: relative;
+}
+
+.btn-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #e30613;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn-outline:hover {
+    color: #fff;
+    border-color: #e30613;
+}
+
+.btn-outline:hover::before {
+    left: 0;
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list-inline > li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+/* Clean About Section - inspired by Bauhaus posters */
+#about {
+    padding: 120px 0;
+    background: #f5f5dc;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* Bauhaus shapes for About section */
+#about {
+    position: relative;
+    overflow: hidden;
+    background-color: #f5f5dc;
+}
+
+#about .container {
+    position: relative;
+    z-index: 2;
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    top: 8%;
+    left: 3%;
+    width: 480px;
+    height: 480px;
+    background: #e30613;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 1.0;
+    border: none;
+}
+
+#about::after {
+    content: '';
+    position: absolute;
+    bottom: 12%;
+    right: 6%;
+    width: 400px;
+    height: 400px;
+    background: #0066cc;
+    z-index: 1;
+    opacity: 1.0;
+    border: none;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Additional large geometric shapes */
+#about .container::before {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 2%;
+    width: 240px;
+    height: 480px;
+    background: #ffcc00;
+    z-index: 1;
+    opacity: 1.0;
+    border: none;
+    transform: rotate(-5deg);
+}
+
+#about .container::after {
+    content: '';
+    position: absolute;
+    top: 15%;
+    right: 2%;
+    width: 320px;
+    height: 320px;
+    background: #333;
+    z-index: 1;
+    opacity: 1.0;
+    border: none;
+    clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%);
+}
+
+#about h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 4.5em;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 3;
+}
+
+#about p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    color: #000;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+    font-weight: 400;
+}
+
+/* Utility classes */
+.text-center { text-align: center; }
+
+/* Clearfix */
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Clean Program Section - Bauhaus style */
+.bauhaus-section {
+    background: #f5f5dc;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* Large geometric objects inspired by Bauhaus */
+.bauhaus-section::before {
+    content: '';
+    position: absolute;
+    top: 12%;
+    right: 8%;
+    width: 520px;
+    height: 520px;
+    background: #0066cc;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 1.0;
+    border: none;
+}
+
+.bauhaus-section::after {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    left: 6%;
+    width: 360px;
+    height: 360px;
+    background: #ffcc00;
+    z-index: 1;
+    opacity: 1.0;
+    border: none;
+    clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%);
+}
+
+/* Additional large shapes for Program section */
+.bauhaus-section .container::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 12%;
+    width: 100px;
+    height: 360px;
+    background: #e30613;
+    z-index: 1;
+    opacity: 1.0;
+    border: none;
+    transform: rotate(8deg);
+}
+
+.bauhaus-section .container::after {
+    content: '';
+    position: absolute;
+    bottom: 12%;
+    right: 18%;
+    width: 260px;
+    height: 260px;
+    background: #000;
+    z-index: 1;
+    opacity: 1.0;
+    border: none;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Modern Bauhaus patterns for Program section */
+ .bauhaus-section .modern-pattern-1 {
+    position: absolute;
+    top: 45%;
+    left: 2%;
+    width: 240px;
+    height: 240px;
+    background: linear-gradient(135deg, #e30613 50%, transparent 50%);
+    z-index: 1;
+    opacity: 1.0;
+    border-radius: 0 50% 0 50%;
+}
+
+ .bauhaus-section .modern-pattern-2 {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 180px;
+    height: 360px;
+    background: repeating-linear-gradient(
+        45deg,
+        #ffcc00 0px,
+        #ffcc00 12px,
+        transparent 12px,
+        transparent 24px
+    );
+    z-index: 1;
+    opacity: 1.0;
+    transform: rotate(-15deg);
+}
+
+ .bauhaus-section .modern-pattern-3 {
+    position: absolute;
+    bottom: 12%;
+    right: 35%;
+    width: 400px;
+    height: 80px;
+    background: repeating-linear-gradient(
+        0deg,
+        #0066cc 0px,
+        #0066cc 8px,
+        #f5f5dc 8px,
+        #f5f5dc 16px
+    );
+    z-index: 1;
+    opacity: 1.0;
+    transform: rotate(8deg);
+}
+
+.bauhaus-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 4.5em;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 3;
+}
+
+.bauhaus-divider {
+    width: 120px;
+    height: 6px;
+    background: #e30613;
+    margin: 0 auto 50px;
+}
+
+.program-schedule {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.session-block {
+    margin-bottom: 50px;
+    background: #ffffff;
+    border-radius: 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    position: relative;
+    border: none;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.session-block:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.morning-session::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: #e30613;
+}
+
+.afternoon-session::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: #0066cc;
+}
+
+.session-header {
+    background: #000;
+    color: white;
+    padding: 25px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.time-block {
+    background: #fff;
+    color: #000;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.session-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.talk-grid {
+    padding: 0;
+    text-align: center;
+}
+
+.talk-item,
+.break-item,
+.poster-session {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 25px 30px;
+    display: flex;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.talk-item:hover {
+    background: #f5f5f5;
+}
+
+.talk-item:last-child,
+.break-item:last-child,
+.poster-session:last-child {
+    border-bottom: none;
+}
+
+.talk-item.keynote {
+    background: #fff5f5;
+    border-left: 4px solid #e30613;
+}
+
+.break-item {
+    background: #f0f0f0;
+    font-style: italic;
+    color: #666;
+    justify-content: center;
+    text-align: center;
+}
+
+.poster-session {
+    background: #f0f8ff;
+    border-left: 4px solid #0066cc;
+}
+
+.talk-time {
+    background: #000;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 0;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85em;
+    min-width: 100px;
+    text-align: center;
+    margin-right: 25px;
+    flex-shrink: 0;
+    border: 2px solid #000;
+}
+
+.talk-content {
+    flex: 1;
+    text-align: center;
+}
+
+.talk-content h3 {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.talk-content .speaker {
+    color: #0066cc;
+    font-weight: 600;
+    margin: 5px 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.talk-content .title {
+    color: #333;
+    font-style: italic;
+    margin: 5px 0 0 0;
+    line-height: 1.4;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.lunch-break {
+    background: #ffcc00;
+    color: #000;
+    padding: 35px;
+    text-align: center;
+    margin: 50px 0;
+    border-radius: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.lunch-break:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(255, 204, 0, 0.3);
+}
+
+.lunch-break .time-block {
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.break-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
+
+/* Responsive adjustments for Program section */
+@media (max-width: 767px) {
+    .bauhaus-title {
+        font-size: 2.5em;
+        letter-spacing: 1px;
+    }
+    
+    .session-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .talk-item,
+    .break-item,
+    .poster-session {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .talk-time {
+        margin-right: 0;
+        margin-bottom: 15px;
+        align-self: center;
+    }
+    
+    .lunch-break {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .program-schedule {
+        margin: 0 15px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .navbar-toggle { display: block; }
+    
+    .navbar-collapse {
+        display: none;
+        background: #000;
+        margin-top: 10px;
+        border-radius: 0;
+        border: 2px solid #fff;
+    }
+    
+    .navbar-nav { float: none; margin: 0; }
+    .navbar-nav > li { float: none; }
+    .navbar-nav > li > a {
+        padding: 15px;
+        border-bottom: 1px solid #333;
+    }
+    .navbar-nav > li:last-child > a { border-bottom: none; }
+    
+    .col-lg-4, .col-lg-8, .col-lg-12 { width: 100%; margin-left: 0; }
+    .col-lg-offset-2 { margin-left: 0; }
+    
+    header { padding: 100px 0 60px; }
+    #about h2 { font-size: 2.5em; letter-spacing: 2px; }
+    .bauhaus-title { font-size: 2.5em; letter-spacing: 1px; }
+    
+    .session-header { flex-direction: column; text-align: center; gap: 15px; }
+    .talk-item, .break-item, .poster-session { flex-direction: column; text-align: center; padding: 20px; }
+    .talk-time { margin: 0 0 15px 0; align-self: center; }
+    .lunch-break { flex-direction: column; gap: 15px; }
+    .program-schedule { margin: 0 15px; }
+}
+
+/* Additional Bauhaus styles for content */
+.bauhaus-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.4em;
+    color: #666;
+    margin: 10px 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bauhaus-desc {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    margin: 20px 0;
+}
+
+.bauhaus-btns {
+    margin-top: 30px;
+}
+
+.bauhaus-block {
+    margin: 25px 0;
+    padding: 20px 0;
+    border-top: 2px solid #e0e0e0;
+}
+
+.bauhaus-block:first-of-type {
+    border-top: none;
+}
+
+.bauhaus-block h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #000;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bauhaus-email {
+    color: #0066cc;
+    font-weight: 600;
+}
+
+.bauhaus-note {
+    background: #f8f8f8;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-left: 4px solid #ffcc00;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.bauhaus-note.gray {
+    background: #f0f0f0;
+    border-left-color: #999;
+    color: #666;
+}
+
+/* Speaker name styling */
+.speaker-name {
+    color: #0066cc;
+    font-weight: 600;
+}
+
+/* Password Protection Overlay */
+.password-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+}
+
+.password-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    padding: 0;
+    max-width: 400px;
+    width: 90%;
+    overflow: hidden;
+    border: 3px solid #000;
+}
+
+.password-form {
+    padding: 40px 30px;
+    text-align: center;
+    background: #f7f5f2;
+    position: relative;
+}
+
+.password-form::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 80px;
+    height: 80px;
+    background: #ffcc00;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.password-form::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+    width: 60px;
+    height: 60px;
+    background: #e30613;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    z-index: 1;
+}
+
+.password-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 2.2em;
+    color: #000;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.password-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #666;
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+}
+
+.password-input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.password-field {
+    flex: 1;
+    padding: 15px 20px;
+    border: 3px solid #000;
+    border-radius: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    background: #fff;
+    color: #000;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.password-field:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+}
+
+.password-btn {
+    padding: 15px 25px;
+    background: #000;
+    color: #fff;
+    border: 3px solid #000;
+    border-radius: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.password-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #e30613;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.password-btn:hover {
+    color: #fff;
+    border-color: #e30613;
+}
+
+.password-btn:hover::before {
+    left: 0;
+}
+
+.password-error {
+    color: #e30613;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: rgba(227, 6, 19, 0.1);
+    border: 2px solid #e30613;
+    border-radius: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive password form */
+@media (max-width: 480px) {
+    .password-container {
+        width: 95%;
+        margin: 20px;
+    }
+    
+    .password-form {
+        padding: 30px 20px;
+    }
+    
+    .password-title {
+        font-size: 1.8em;
+    }
+    
+    .password-input-group {
+        flex-direction: column;
+    }
+    
+    .password-btn {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* Bauhaus Background Container */
