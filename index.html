@@ -18,8 +18,10 @@
         <h2 class="password-title">TCCCS 2025</h2>
         <p class="password-subtitle">Access Required</p>
         <div class="password-input-group">
-          <input type="password" id="password-input" placeholder="Enter password" class="password-field">
-          <button onclick="checkPassword()" class="password-btn">Enter</button>
+          <form id="password-form" onsubmit="return false;">
+            <input type="password" id="password-input" name="password" placeholder="Enter password" class="password-field" autocomplete="current-password">
+            <button type="submit" onclick="checkPassword()" class="password-btn">Enter</button>
+          </form>
         </div>
         <div id="password-error" class="password-error" style="display: none;">
           Incorrect password. Please try again.
@@ -238,33 +240,90 @@ function checkPassword() {
 
     if (inputPassword === correctPassword) {
         overlay.style.display = 'none';
-        sessionStorage.setItem('tcccs2025_authenticated', 'true');
+        // Use localStorage instead of sessionStorage to persist across browser sessions
+        localStorage.setItem('tcccs2025_authenticated', 'true');
+        localStorage.setItem('tcccs2025_auth_time', Date.now().toString());
+        
+        // Clear any previous error messages
+        errorDiv.style.display = 'none';
+        
+        // Allow browser to save password by triggering form submission
+        const form = document.getElementById('password-form');
+        if (form) {
+            // Create a temporary submit event to trigger browser password save
+            const submitEvent = new Event('submit', { bubbles: true, cancelable: true });
+            form.dispatchEvent(submitEvent);
+        }
     } else {
         errorDiv.style.display = 'block';
         document.getElementById('password-input').value = '';
         document.getElementById('password-input').focus();
     }
+    return false; // Prevent actual form submission
 }
 
 // Check if already authenticated
-window.onload = function() {
-    if (sessionStorage.getItem('tcccs2025_authenticated') === 'true') {
-        document.getElementById('password-overlay').style.display = 'none';
-    } else {
-        document.getElementById('password-overlay').style.display = 'flex';
-        setTimeout(() => {
-            document.getElementById('password-input').focus();
-        }, 100);
+function checkAuthentication() {
+    const authenticated = localStorage.getItem('tcccs2025_authenticated');
+    const authTime = localStorage.getItem('tcccs2025_auth_time');
+    
+    // Check if authentication is valid (within 360 days)
+    if (authenticated === 'true' && authTime) {
+        const threeSixtyDaysInMs = 360 * 24 * 60 * 60 * 1000;
+        const isValid = (Date.now() - parseInt(authTime)) < threeSixtyDaysInMs;
+        
+        if (isValid) {
+            document.getElementById('password-overlay').style.display = 'none';
+            return true;
+        } else {
+            // Clear expired authentication
+            localStorage.removeItem('tcccs2025_authenticated');
+            localStorage.removeItem('tcccs2025_auth_time');
+        }
     }
+    
+    document.getElementById('password-overlay').style.display = 'flex';
+    setTimeout(() => {
+        document.getElementById('password-input').focus();
+    }, 100);
+    return false;
+}
+
+// Initialize on page load
+window.onload = function() {
+    checkAuthentication();
 };
 
 // Allow Enter key to submit password
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('password-input').addEventListener('keypress', function(e) {
+    const passwordInput = document.getElementById('password-input');
+    const passwordForm = document.getElementById('password-form');
+    
+    // Handle Enter key press
+    passwordInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
+            e.preventDefault();
             checkPassword();
         }
     });
+    
+    // Handle form submission
+    passwordForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        checkPassword();
+    });
+    
+    // Add username field for better browser password management
+    if (!document.getElementById('username-input')) {
+        const usernameInput = document.createElement('input');
+        usernameInput.type = 'text';
+        usernameInput.id = 'username-input';
+        usernameInput.name = 'username';
+        usernameInput.value = 'tcccs2025-user';
+        usernameInput.style.display = 'none';
+        usernameInput.autocomplete = 'username';
+        passwordForm.insertBefore(usernameInput, passwordInput);
+    }
 });
 
 $(document).ready(function() {
@@ -284,6 +343,13 @@ $(document).ready(function() {
             return false;
         }
     });
+    
+    // Add clear authentication function (for debugging/testing)
+    window.clearAuth = function() {
+        localStorage.removeItem('tcccs2025_authenticated');
+        localStorage.removeItem('tcccs2025_auth_time');
+        location.reload();
+    };
 });
 </script>
 </body>

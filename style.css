@@ -1012,6 +1012,13 @@ header .container::after {
     width: 100%;
 }
 
+#password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
 .password-field {
     width: 100%;
     padding: 15px 20px;
