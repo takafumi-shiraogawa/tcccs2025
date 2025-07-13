@@ -2,6 +2,8 @@
 html {
     font-size: 60%;
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
 }
 
 body {
@@ -16,6 +18,8 @@ body {
     min-height: 100vh;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* ===== ANIMATIONS ===== */
@@ -36,13 +40,22 @@ body {
 /* ===== SECTION ANIMATIONS ===== */
 section {
     opacity: 0;
-    transform: translateY(30px);
-    animation: slideInUp 0.8s ease-out forwards;
+    transform: translateY(20px);
+    animation: slideInUp 0.6s ease-out forwards;
+    will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    section {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
 }
 
 section:nth-child(1) { animation-delay: 0.1s; }
-section:nth-child(2) { animation-delay: 0.3s; }
-section:nth-child(3) { animation-delay: 0.5s; }
+section:nth-child(2) { animation-delay: 0.2s; }
+section:nth-child(3) { animation-delay: 0.3s; }
 
 /* ===== UTILITY STYLES ===== */
 * { box-sizing: border-box; }
@@ -1065,12 +1078,31 @@ header .container::after {
 
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 767px) {
-    /* Force global scaling for mobile */
-    html { font-size: 45% !important; }
+    /* Improve mobile performance */
+    html { 
+        font-size: 55% !important;
+        scroll-behavior: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
     body { 
         font-size: 1rem !important; 
-        transform: scale(0.85) !important; 
-        transform-origin: top left !important;
+        background: #f5f5dc;
+        background-attachment: fixed;
+        will-change: auto;
+    }
+    
+    /* Disable problematic animations on mobile */
+    * {
+        animation-duration: 0.3s !important;
+        transition-duration: 0.2s !important;
+    }
+    
+    section {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        will-change: auto;
     }
     
     .navbar-toggle { display: block; }
@@ -1101,7 +1133,7 @@ header .container::after {
         padding: 1.8rem;
         text-align: center;
         border-bottom: 0.1rem solid rgba(255,204,0,0.1);
-        font-size: 1.0rem !important;
+        font-size: 1.4rem !important;
     }
     
     .navbar-nav > li:last-child > a {
@@ -1111,42 +1143,141 @@ header .container::after {
     header { 
         padding: 4rem 0 3rem; 
         min-height: 40vh;
+        overflow: hidden;
     }
     
-    /* Force all text elements to scale proportionally */
+    /* Optimize background elements for mobile */
+    header::before,
+    header::after,
+    #about::before,
+    #about::after,
+    .bauhaus-section::before,
+    .bauhaus-section::after {
+        display: none !important;
+    }
+    
+    .bauhaus-lines-regular {
+        display: none !important;
+    }
+    
+    /* Mobile text sizing */
     .bauhaus-title { 
-        font-size: 1.8em !important; 
-        letter-spacing: -0.1rem !important; 
+        font-size: 3.2em !important; 
+        letter-spacing: -0.5px !important;
+        line-height: 1.1 !important;
     }
     
     .bauhaus-subtitle {
-        font-size: 0.9em !important;
-        letter-spacing: 0.05em !important;
+        font-size: 1.6em !important;
+        letter-spacing: 0.5px !important;
+        line-height: 1.3 !important;
     }
     
     .bauhaus-desc {
-        font-size: 1.3em !important;
+        font-size: 1.5em !important;
         line-height: 1.4 !important;
     }
     
     .bauhaus-block h4 {
-        font-size: 1.4em !important;
-        letter-spacing: 0.05em !important;
+        font-size: 1.8em !important;
+        letter-spacing: 0.5px !important;
     }
     
     .bauhaus-block p {
-        font-size: 1.3em !important;
+        font-size: 1.4em !important;
+        line-height: 1.5 !important;
     }
     
     .btn {
-        font-size: 0.9rem !important;
-        padding: 0.5rem 1.2rem !important;
-        letter-spacing: 0.08em !important;
+        font-size: 1.2rem !important;
+        padding: 1rem 2rem !important;
+        letter-spacing: 0.1em !important;
+        margin: 0.5rem !important;
     }
     
     .btn-lg {
-        font-size: 0.9rem !important;
-        padding: 0.6rem 1.5rem !important;
+        font-size: 1.2rem !important;
+        padding: 1.2rem 2.5rem !important;
+    }
+    
+    /* Optimize containers for mobile */
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .bauhaus-text-bg {
+        max-width: 95% !important;
+        padding: 2rem !important;
+        margin: 0 auto 2rem auto !important;
+    }
+    
+    /* Mobile-specific improvements */
+    .session-block {
+        margin-bottom: 1rem !important;
+        border-radius: 0.8rem !important;
+    }
+    
+    .session-header {
+        padding: 1.5rem !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+    
+    .time-block {
+        font-size: 1.4em !important;
+        padding: 0.8rem 1.5rem !important;
+        text-align: center !important;
+        width: 100% !important;
+        max-width: 200px !important;
+    }
+    
+    .session-title {
+        font-size: 1.4em !important;
+        text-align: center !important;
+    }
+    
+    .talk-grid {
+        padding: 1rem !important;
+    }
+    
+    .talk-item {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 1.5rem 1rem !important;
+    }
+    
+    .talk-time {
+        margin: 0 0 1rem 0 !important;
+        width: 100% !important;
+        max-width: 200px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .talk-content .speaker {
+        font-size: 1.4em !important;
+        margin: 0.5rem 0 !important;
+    }
+    
+    .talk-content .title {
+        font-size: 1.3em !important;
+        line-height: 1.4 !important;
+    }
+    
+    .lunch-break {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        padding: 1.5rem !important;
+    }
+    
+    .break-title {
+        font-size: 1.6em !important;
+    }
+    
+    .bauhaus-note {
+        font-size: 1.3em !important;
+        padding: 1rem !important;
+        margin: 1rem 0 !important;
     }
     
     .navbar-brand {
@@ -1268,6 +1399,94 @@ header .container::after {
     p, div, span, a, li, strong, em, b, i {
         font-size: inherit !important;
         line-height: 1.3 !important;
+    }
+}
+
+/* ===== MOBILE PERFORMANCE OPTIMIZATIONS ===== */
+@media (max-width: 767px) {
+    /* Additional mobile optimizations */
+    
+    /* Disable complex effects that can cause lag */
+    .bauhaus-text-bg:hover {
+        transform: none !important;
+        box-shadow: 0 0.8rem 3.2rem rgba(0,0,0,0.12), 0 0.2rem 0.8rem rgba(0,0,0,0.08) !important;
+    }
+    
+    .session-block:hover {
+        transform: none !important;
+    }
+    
+    .btn-outline:hover {
+        transform: none !important;
+    }
+    
+    .time-block:hover {
+        transform: none !important;
+    }
+    
+    .lunch-break:hover {
+        transform: none !important;
+    }
+    
+    /* Simplify gradients for better performance */
+    .bauhaus-bg {
+        background: #f7f5f2 !important;
+    }
+    
+    body {
+        background: #f5f5dc !important;
+    }
+    
+    .navbar {
+        background: #000 !important;
+    }
+    
+    .navbar-default {
+        background: #000 !important;
+    }
+    
+    /* Disable backdrop filters on mobile */
+    .bauhaus-text-bg {
+        backdrop-filter: none !important;
+    }
+    
+    .navbar-collapse {
+        backdrop-filter: none !important;
+    }
+    
+    /* Optimize animations */
+    @keyframes shimmer {
+        0%, 100% { opacity: 0.1; }
+        50% { opacity: 0.2; }
+    }
+    
+    /* Touch optimization */
+    .btn,
+    .navbar-nav > li > a,
+    .talk-item {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: rgba(255, 204, 0, 0.3);
+    }
+    
+    /* Ensure proper viewport handling */
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+}
+
+/* Additional mobile viewport fix */
+@supports (-webkit-appearance: none) {
+    @media (max-width: 767px) {
+        body {
+            -webkit-overflow-scrolling: touch;
+            overflow-x: hidden;
+        }
+        
+        /* Fix for iOS safari bouncing */
+        html, body {
+            overscroll-behavior: none;
+        }
     }
 }
 
