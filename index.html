@@ -9,7 +9,7 @@
     <title>TCCCS 2025</title>
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="style.css?v=20250713036&t=1720857606">
+    <link rel="stylesheet" href="style.css?v=20250713039&t=1720857609">
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet" type="text/css">
     <style>
         /* Force global scaling - inline to bypass cache */
@@ -19,18 +19,18 @@
         .navbar-brand { font-size: 1.4rem !important; }
         .navbar-nav > li > a { font-size: 1.4rem !important; }
         /* バナーボタンのフォントサイズ強制適用 */
-        .bauhaus-btns .btn { font-size: 1.4rem !important; }
+        .bauhaus-btns .btn { font-size: 1.68rem !important; }
         /* 小さいテキストのサイズ調整 */
-        .bauhaus-note { font-size: 1.5em !important; }
+        .bauhaus-note { font-size: 1.8em !important; }
         .talk-time { font-size: 1.5em !important; }
         .time-block { font-size: 1.6em !important; }
         /* すべてのテキスト要素を確実に相対サイズに */
         strong, em, b, i, span { font-size: 1em !important; }
         .bauhaus-block p { font-size: 1.4em !important; }
         .bauhaus-block p strong { font-size: 1em !important; }
-        .bauhaus-block h4 { font-size: 1.8em !important; }
+        .bauhaus-block h4 { font-size: 2.16em !important; }
         .bauhaus-desc { font-size: 1.4em !important; }
-        .bauhaus-subtitle { font-size: 1.8em !important; }
+        .bauhaus-subtitle { font-size: 2.16em !important; }
         /* スピーカー名を相対的に大きく */
         .talk-content .speaker { font-size: 1.6em !important; }
         /* 発表タイトルも大きく */
@@ -44,10 +44,10 @@
         @media (max-width: 767px) {
             .navbar-brand { font-size: 1.0rem !important; letter-spacing: 0.1em !important; }
             .navbar-nav > li > a { font-size: 1.0rem !important; }
-            .bauhaus-title { font-size: 1.7em !important; }
+            .bauhaus-title { font-size: 2.04em !important; }
             .bauhaus-subtitle { font-size: 1.0em !important; }
-            .bauhaus-desc { font-size: 1.0em !important; }
-            .btn, .btn-lg { font-size: 1.0rem !important; }
+            .bauhaus-desc { font-size: 1.2em !important; }
+            .btn, .btn-lg { font-size: 1.2rem !important; }
             .session-title { font-size: 1.2em !important; }
             .talk-time { font-size: 1.0em !important; }
             .time-block { font-size: 1.1em !important; }
@@ -55,15 +55,15 @@
             .talk-content .speaker { font-size: 1.0em !important; }
             .talk-content .title { font-size: 0.9em !important; }
             .break-title { font-size: 1.2em !important; }
-            .bauhaus-note { font-size: 1.0em !important; }
+            .bauhaus-note { font-size: 1.2em !important; }
             #about h2 { font-size: 1.7em !important; }
             /* すべてのテキスト要素をモバイルでも相対サイズに */
             strong, em, b, i, span { font-size: 1em !important; }
-            .bauhaus-block p { font-size: 1.1em !important; }
+            .bauhaus-block p { font-size: 1.32em !important; }
             .bauhaus-block p strong { font-size: 1em !important; }
-            .bauhaus-block h4 { font-size: 1.3em !important; }
-            .bauhaus-desc { font-size: 1.0em !important; }
-            .bauhaus-subtitle { font-size: 1.0em !important; }
+            .bauhaus-block h4 { font-size: 1.56em !important; }
+            .bauhaus-desc { font-size: 1.2em !important; }
+            .bauhaus-subtitle { font-size: 1.2em !important; }
             /* スピーカー名をモバイルでも相対的に大きく */
             .talk-content .speaker { font-size: 1.2em !important; }
             /* 発表タイトルもモバイルで大きく */
@@ -456,16 +456,16 @@ $(document).ready(function() {
         $('.time-block').css('font-size', '1.6em');
         $('.navbar-brand').css('font-size', '1.4rem');
         $('.navbar-nav > li > a').css('font-size', '1.4rem');
-        $('.bauhaus-btns .btn').css('font-size', '1.4rem');
+        $('.bauhaus-btns .btn').css('font-size', '1.68rem');
         
         // モバイル端末の場合
         if (window.innerWidth <= 767) {
             $('.navbar-brand').css({'font-size': '1.0rem', 'letter-spacing': '0.1em'});
             $('.navbar-nav > li > a').css('font-size', '1.0rem');
-            $('.bauhaus-title').css('font-size', '1.7em');
+            $('.bauhaus-title').css('font-size', '2.04em');
             $('.bauhaus-subtitle').css('font-size', '1.0em');
-            $('.bauhaus-desc').css('font-size', '1.0em');
-            $('.btn, .btn-lg').css('font-size', '1.0rem');
+            $('.bauhaus-desc').css('font-size', '1.2em');
+            $('.btn, .btn-lg').css('font-size', '1.2rem');
             $('.session-title').css('font-size', '1.2em');
             $('.talk-time').css('font-size', '1.0em');
             $('.time-block').css('font-size', '1.1em');

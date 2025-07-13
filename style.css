@@ -1,4 +1,4 @@
-/* FORCE RELOAD - Version 20250713-036 - Cache Buster */
+/* FORCE RELOAD - Version 20250713-039 - Cache Buster */
 /* Global scaling optimized for proper display size */
 html {
     font-size: 60%;
@@ -383,7 +383,7 @@ header::after {
     height: 30.6rem;
     background: linear-gradient(135deg, #e30613 0%, #ff1a2e 100%);
     z-index: 1;
-    opacity: 0.95;
+    opacity: 1.0;
     border: none;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     animation: pulse 4s ease-in-out infinite;
@@ -429,7 +429,7 @@ header .container::after {
     display: inline-block;
     padding: 1.4rem 3.5rem;
     margin: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.68rem;
     font-weight: 600;
     line-height: 1.4;
     text-align: center;
@@ -449,7 +449,7 @@ header .container::after {
 
 .btn-lg {
     padding: 1.8rem 4.5rem;
-    font-size: 1.4rem;
+    font-size: 1.68rem;
 }
 
 .btn-outline {
@@ -586,7 +586,7 @@ header .container::after {
 }
 
 #about p {
-    font-size: 1.8em;
+    font-size: 2.16em;
     line-height: 1.8;
     color: #2a2a2a;
     max-width: 850px;
@@ -725,7 +725,7 @@ header .container::after {
 .bauhaus-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: 4.2em;
+    font-size: 5.04em;
     color: #1a1a1a;
     text-transform: uppercase;
     letter-spacing: -1px;
@@ -1086,27 +1086,27 @@ header .container::after {
     }
     
     .bauhaus-title { 
-        font-size: 1.7em; 
+        font-size: 2.04em; 
         letter-spacing: -0.1rem; 
     }
     
     .bauhaus-subtitle {
-        font-size: 1.0em;
+        font-size: 1.2em;
         letter-spacing: 0.05em;
     }
     
     .bauhaus-desc {
-        font-size: 1.0em;
+        font-size: 1.2em;
         line-height: 1.4;
     }
     
     .bauhaus-block h4 {
-        font-size: 1.3em;
+        font-size: 1.56em;
         letter-spacing: 0.05em;
     }
     
     .bauhaus-block p {
-        font-size: 1.1em;
+        font-size: 1.32em;
     }
     
     .btn {
@@ -1175,7 +1175,7 @@ header .container::after {
     }
     
     .bauhaus-note {
-        font-size: 1.0em;
+        font-size: 1.2em;
         padding: 1rem 1.2rem;
     }
     
@@ -1215,7 +1215,7 @@ header .container::after {
 .bauhaus-subtitle {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 1.8em;
+    font-size: 2.16em;
     color: #666;
     margin: 8px 0 16px 0;
     text-transform: uppercase;
@@ -1223,7 +1223,7 @@ header .container::after {
 }
 
 .bauhaus-desc {
-    font-size: 1.4em;
+    font-size: 1.68em;
     line-height: 1.6;
     color: #333;
     margin: 16px 0;
@@ -1246,7 +1246,7 @@ header .container::after {
 .bauhaus-block h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 1.8em;
+    font-size: 2.16em;
     color: #000;
     margin: 0 0 0.8rem 0;
     text-transform: uppercase;
@@ -1254,7 +1254,7 @@ header .container::after {
 }
 
 .bauhaus-block p {
-    font-size: 1.4em;
+    font-size: 1.68em;
     line-height: 1.6;
     color: #333;
     margin: 0.4rem 0;
@@ -1270,7 +1270,7 @@ header .container::after {
     padding: 1.2rem 1.6rem;
     margin: 1.6rem 0;
     border-left: 0.4rem solid #ffcc00;
-    font-size: 1.5em;
+    font-size: 1.8em;
     line-height: 1.5;
 }
 
