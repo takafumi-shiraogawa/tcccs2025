@@ -1,4 +1,4 @@
-/* FORCE RELOAD - Version 20250713-039 - Cache Buster */
+/* FORCE RELOAD - Version 20250713-042 - Cache Buster */
 /* Global scaling optimized for proper display size */
 html {
     font-size: 60%;
@@ -835,7 +835,7 @@ header .container::after {
     border-radius: 2.5rem;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6em;
+    font-size: 1.8em;
     letter-spacing: 0.1em;
     border: 0.2rem solid rgba(255,255,255,0.2);
     box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.15);
@@ -906,7 +906,7 @@ header .container::after {
     border-radius: 0;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.8em;
     min-width: 10rem;
     text-align: center;
     margin-right: 2.5rem;
@@ -924,7 +924,7 @@ header .container::after {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     margin: 0 0 0.8rem 0;
-    font-size: 1.3em;
+    font-size: 1.8em;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-align: center;
@@ -934,7 +934,7 @@ header .container::after {
     color: #0066cc;
     font-weight: 600;
     margin: 0.5rem 0;
-    font-size: 1.6em;
+    font-size: 1.8em;
     text-align: center;
 }
 
@@ -944,7 +944,7 @@ header .container::after {
     margin: 0.5rem 0 0 0;
     line-height: 1.4;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 
 /* Enhanced lunch break styling */
@@ -1058,12 +1058,21 @@ header .container::after {
     }
     
     .navbar-nav { float: none; margin: 0; }
-    .navbar-nav > li { float: none; }
+    .navbar-nav > li { 
+        float: none; 
+        width: 100%;
+        margin: 0;
+        list-style: none;
+    }
     .navbar-nav > li > a {
         padding: 1.8rem;
         border-bottom: 0.1rem solid rgba(255,255,255,0.1);
         transition: all 0.3s ease;
         font-size: 1.0rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0;
     }
     .navbar-nav > li > a:hover {
         background: rgba(255,204,0,0.1);
@@ -1110,18 +1119,18 @@ header .container::after {
     }
     
     .btn {
-        font-size: 1.0rem;
+        font-size: 1.2rem;
         padding: 1rem 2rem;
         letter-spacing: 0.08em;
     }
     
     .btn-lg {
-        font-size: 1.0rem;
+        font-size: 1.2rem;
         padding: 1.2rem 2.5rem;
     }
     
     .navbar-brand {
-        font-size: 1.0rem;
+        font-size: 1.2rem;
         letter-spacing: 0.1em;
     }
     
@@ -1146,17 +1155,17 @@ header .container::after {
     .talk-time { 
         margin: 0 0 1.8rem 0; 
         align-self: center;
-        font-size: 1.0em;
+        font-size: 1.2em;
     }
     
     .time-block {
-        font-size: 1.1em;
+        font-size: 1.2em;
         padding: 0.8rem 1.5rem;
         letter-spacing: 0.05em;
     }
     
     .talk-content h3 {
-        font-size: 1.0em;
+        font-size: 1.2em;
         letter-spacing: 0.05em;
     }
     
@@ -1165,7 +1174,7 @@ header .container::after {
     }
     
     .talk-content .title {
-        font-size: 1.1em;
+        font-size: 1.2em;
         line-height: 1.3;
     }
     
