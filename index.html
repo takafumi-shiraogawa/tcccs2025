@@ -9,7 +9,7 @@
     <title>TCCCS 2025</title>
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="style.css?v=20250713033&t=1720857603">
+    <link rel="stylesheet" href="style.css?v=20250713036&t=1720857606">
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet" type="text/css">
     <style>
         /* Force global scaling - inline to bypass cache */
@@ -35,6 +35,10 @@
         .talk-content .speaker { font-size: 1.6em !important; }
         /* 発表タイトルも大きく */
         .talk-content .title { font-size: 1.5em !important; }
+        /* ABOUTとPROGRAMタイトルをセンタリング */
+        #about h2, .bauhaus-title { text-align: center !important; }
+        /* 白い部分の幅を4/5に調整 */
+        .bauhaus-text-bg { max-width: 56rem !important; }
         
         /* モバイル端末でのレスポンシブフォントサイズ強制適用 */
         @media (max-width: 767px) {
@@ -64,6 +68,10 @@
             .talk-content .speaker { font-size: 1.2em !important; }
             /* 発表タイトルもモバイルで大きく */
             .talk-content .title { font-size: 1.1em !important; }
+            /* ABOUTとPROGRAMタイトルをモバイルでもセンタリング */
+            #about h2, .bauhaus-title { text-align: center !important; }
+            /* モバイルでも白い部分の幅を調整 */
+            .bauhaus-text-bg { max-width: 90% !important; }
         }
     </style>
 </head>
