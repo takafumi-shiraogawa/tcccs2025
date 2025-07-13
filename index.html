@@ -12,62 +12,51 @@
     <link rel="stylesheet" href="style.css?v=20250713056&t=1720858640">
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet" type="text/css">
     <style>
-        /* Force global scaling - inline to bypass cache */
+        /* Global scaling and layout optimization */
         html { font-size: 60% !important; }
         body { font-size: 1rem !important; line-height: 1.4 !important; }
-        /* ナビゲーションのフォントサイズ強制適用 */
+        .bauhaus-divider { display: none !important; }
+        .bauhaus-text-bg { max-width: 56rem !important; }
+        .bauhaus-title, #about h2 { text-align: center !important; }
+        
+        /* Navigation */
         .navbar-brand { font-size: 1.4rem !important; }
         .navbar-nav > li > a { font-size: 1.4rem !important; }
-        /* バナーボタンのフォントサイズ強制適用 */
-        .bauhaus-btns .btn { font-size: 1.51rem !important; }
-        /* バナーボタンをコンパクトに */
-        .bauhaus-btns .btn { padding: 0.8rem 2rem !important; }
-        /* 小さいテキストのサイズ調整 */
+        
+        /* Buttons */
+        .bauhaus-btns .btn { font-size: 1.51rem !important; padding: 0.8rem 2rem !important; }
+        
+        /* Text elements */
         .bauhaus-note { font-size: 1.8em !important; }
         .talk-time { font-size: 1.5em !important; }
         .time-block { font-size: 1.6em !important; }
-        /* すべてのテキスト要素を確実に相対サイズに */
-        strong, em, b, i, span { font-size: 1em !important; }
         .bauhaus-block p { font-size: 1.82em !important; }
-        .bauhaus-block p strong { font-size: 1em !important; }
         .bauhaus-block h4 { font-size: 2.16em !important; }
         .bauhaus-desc { font-size: 2.03em !important; }
         header .bauhaus-desc { font-size: 2.23em !important; }
         .bauhaus-subtitle { font-size: 2.16em !important; }
-        /* スピーカー名を相対的に大きく */
         .talk-content .speaker { font-size: 1.92em !important; }
-        /* 発表タイトルも大きく */
         .talk-content .title { font-size: 1.8em !important; }
-        /* ABOUTとPROGRAMタイトルをセンタリング */
-        #about h2, .bauhaus-title { text-align: center !important; }
-        /* 白い部分の幅を4/5に調整 */
-        .bauhaus-text-bg { max-width: 56rem !important; }
+        strong, em, b, i, span { font-size: 1em !important; }
         
-        /* 各項目間の余白をコンパクトに */
+        /* Spacing optimizations */
         .bauhaus-block { margin-bottom: 1.5rem !important; }
-        .bauhaus-block h4 { margin-bottom: 0.5rem !important; margin-top: 0 !important; }
-        .bauhaus-block p { margin-bottom: 0.5rem !important; margin-top: 0 !important; }
-        .bauhaus-note { margin-bottom: 1rem !important; margin-top: 1rem !important; }
-        .bauhaus-desc { margin-bottom: 1rem !important; margin-top: 0 !important; }
-        .bauhaus-divider { margin: 1rem 0 !important; }
-        .bauhaus-title { margin-bottom: 0.5rem !important; margin-top: 0 !important; }
-        .bauhaus-subtitle { margin-bottom: 1rem !important; margin-top: 0 !important; }
-        
-        /* プログラムセクションの項目間余白調整 */
+        .bauhaus-block h4 { margin: 0 0 0.5rem 0 !important; }
+        .bauhaus-block p { margin: 0 0 0.5rem 0 !important; }
+        .bauhaus-note { margin: 1rem 0 !important; }
+        .bauhaus-desc { margin: 0 0 1rem 0 !important; }
+        .bauhaus-title { margin: 0 0 0.5rem 0 !important; }
+        .bauhaus-subtitle { margin: 0 0 1rem 0 !important; }
         .session-block { margin-bottom: 1rem !important; }
         .session-header { margin-bottom: 0.5rem !important; }
         .talk-item { margin-bottom: 0.5rem !important; }
         .talk-grid { margin-top: 0.5rem !important; }
         .lunch-break { margin: 1rem 0 !important; }
-        /* プログラム内の各要素の余白をさらにコンパクトに */
-        .talk-content p { margin-bottom: 0.2rem !important; margin-top: 0 !important; }
+        .talk-content p { margin: 0 0 0.2rem 0 !important; }
         .time-block { margin-bottom: 0.3rem !important; }
-        .session-title { margin-bottom: 0 !important; margin-top: 0 !important; }
+        .session-title { margin: 0 !important; }
         
-        /* 赤い装飾線（divider）を非表示に */
-        .bauhaus-divider { display: none !important; visibility: hidden !important; opacity: 0 !important; }
-        
-        /* モバイル端末でのレスポンシブフォントサイズ強制適用 */
+        /* Mobile responsive */
         @media (max-width: 767px) {
             .navbar-brand { font-size: 1.0rem !important; letter-spacing: 0.1em !important; }
             .navbar-nav > li > a { font-size: 1.0rem !important; }
@@ -76,53 +65,34 @@
             .bauhaus-desc { font-size: 1.87em !important; }
             header .bauhaus-desc { font-size: 2.06em !important; }
             .btn, .btn-lg { font-size: 1.08rem !important; }
-            /* モバイルでもバナーボタンをコンパクトに */
             .bauhaus-btns .btn { padding: 0.6rem 1.5rem !important; }
+            .bauhaus-text-bg { max-width: 90% !important; }
             .session-title { font-size: 1.2em !important; }
             .talk-time { font-size: 1.0em !important; }
             .time-block { font-size: 1.1em !important; }
-            .talk-content h3 { font-size: 1.0em !important; }
-            .talk-content .speaker { font-size: 1.0em !important; }
-            .talk-content .title { font-size: 0.9em !important; }
+            .talk-content .speaker { font-size: 1.44em !important; }
+            .talk-content .title { font-size: 1.32em !important; }
             .break-title { font-size: 1.2em !important; }
             .bauhaus-note { font-size: 1.2em !important; }
             #about h2 { font-size: 1.7em !important; }
-            /* すべてのテキスト要素をモバイルでも相対サイズに */
-            strong, em, b, i, span { font-size: 1em !important; }
             .bauhaus-block p { font-size: 1.72em !important; }
-            .bauhaus-block p strong { font-size: 1em !important; }
             .bauhaus-block h4 { font-size: 1.56em !important; }
-            .bauhaus-desc { font-size: 1.87em !important; }
-            .bauhaus-subtitle { font-size: 1.2em !important; }
-            /* スピーカー名をモバイルでも相対的に大きく */
-            .talk-content .speaker { font-size: 1.44em !important; }
-            /* 発表タイトルもモバイルで大きく */
-            .talk-content .title { font-size: 1.32em !important; }
-            /* ABOUTとPROGRAMタイトルをモバイルでもセンタリング */
-            #about h2, .bauhaus-title { text-align: center !important; }
-            /* モバイルでも白い部分の幅を調整 */
-            .bauhaus-text-bg { max-width: 90% !important; }
             
-            /* モバイルでも各項目間の余白をコンパクトに */
+            /* Mobile spacing */
             .bauhaus-block { margin-bottom: 1rem !important; }
-            .bauhaus-block h4 { margin-bottom: 0.3rem !important; margin-top: 0 !important; }
-            .bauhaus-block p { margin-bottom: 0.3rem !important; margin-top: 0 !important; }
-            .bauhaus-note { margin-bottom: 0.8rem !important; margin-top: 0.8rem !important; }
-            .bauhaus-desc { margin-bottom: 0.8rem !important; margin-top: 0 !important; }
-            .bauhaus-divider { margin: 0.8rem 0 !important; }
-            .bauhaus-title { margin-bottom: 0.3rem !important; margin-top: 0 !important; }
-            .bauhaus-subtitle { margin-bottom: 0.8rem !important; margin-top: 0 !important; }
-            
-            /* モバイルでもプログラムセクションの項目間余白調整 */
+            .bauhaus-block h4 { margin: 0 0 0.3rem 0 !important; }
+            .bauhaus-block p { margin: 0 0 0.3rem 0 !important; }
+            .bauhaus-note { margin: 0.8rem 0 !important; }
+            .bauhaus-desc { margin: 0 0 0.8rem 0 !important; }
+            .bauhaus-title { margin: 0 0 0.3rem 0 !important; }
+            .bauhaus-subtitle { margin: 0 0 0.8rem 0 !important; }
             .session-block { margin-bottom: 0.7rem !important; }
             .session-header { margin-bottom: 0.3rem !important; }
             .talk-item { margin-bottom: 0.3rem !important; }
             .talk-grid { margin-top: 0.3rem !important; }
             .lunch-break { margin: 0.7rem 0 !important; }
-            /* モバイルでもプログラム内の各要素の余白をコンパクトに */
-            .talk-content p { margin-bottom: 0.1rem !important; margin-top: 0 !important; }
+            .talk-content p { margin: 0 0 0.1rem 0 !important; }
             .time-block { margin-bottom: 0.2rem !important; }
-            .session-title { margin-bottom: 0 !important; margin-top: 0 !important; }
         }
     </style>
 </head>
@@ -140,113 +110,107 @@
             <button type="submit" onclick="checkPassword()" class="password-btn">Enter</button>
           </form>
         </div>
-        <div id="password-error" class="password-error" style="display: none;">
-          Incorrect password. Please try again.
-        </div>
+        <div id="password-error" class="password-error" style="display: none;">Incorrect password. Please try again.</div>
       </div>
     </div>
   </div>
 
   <!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="https://takafumi-shiraogawa.github.io/tcccs2025/">TCCCS 2025</a>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="https://takafumi-shiraogawa.github.io/tcccs2025/">TCCCS 2025</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">About</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="https://www.ims.ac.jp/en/about/campus/access.html">Venue</a></li>
+        </ul>
+      </div>
     </div>
-
-    <div class="collapse navbar-collapse" id="navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">About</a></li>
-        <li><a href="#program">Program</a></li>
-        <li><a href="https://www.ims.ac.jp/en/about/campus/access.html">Venue</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
 
   <!-- Header -->
-<header id="intro">
-  <div class="bauhaus-bg">
-    <div class="bauhaus-lines-regular">
-      <div class="line" style="top:8%;"></div>
-      <div class="line" style="top:15%;"></div>
-      <div class="line" style="top:23%;"></div>
-      <div class="line bold" style="top:30%;"></div>
-      <div class="line" style="top:38%;"></div>
-      <div class="line" style="top:45%;"></div>
-      <div class="line" style="top:53%;"></div>
-      <div class="line bold" style="top:60%;"></div>
-      <div class="line" style="top:68%;"></div>
-      <div class="line" style="top:75%;"></div>
-      <div class="line" style="top:83%;"></div>
-      <div class="line bold" style="top:90%;"></div>
-      <!-- <div class="line" style="top:97%;"></div> -->
-    </div>
-    <div class="intro-content">
-      <div class="bauhaus-text-bg">
-        <h1 class="bauhaus-title" data-text="TCCCS 2025">TCCCS 2025</h1>
-        <h2 class="bauhaus-subtitle">Theoretical and Computational Chemistry of Complex Systems</h2>
-        <div class="bauhaus-divider"></div>
-        <p class="bauhaus-desc">Okazaki, Japan<br>November 15th (Saturday), 2025</p>
-        <div class="bauhaus-btns">
-          <a href="https://www.ims.ac.jp/en/about/campus/access.html" class="btn btn-lg btn-outline">Venue</a>
-          <a href="#about" class="btn btn-lg btn-outline">About</a>
-          <a href="#program" class="btn btn-lg btn-outline">Program</a>
+  <header id="intro">
+    <div class="bauhaus-bg">
+      <div class="bauhaus-lines-regular">
+        <div class="line" style="top:8%;"></div>
+        <div class="line" style="top:15%;"></div>
+        <div class="line" style="top:23%;"></div>
+        <div class="line bold" style="top:30%;"></div>
+        <div class="line" style="top:38%;"></div>
+        <div class="line" style="top:45%;"></div>
+        <div class="line" style="top:53%;"></div>
+        <div class="line bold" style="top:60%;"></div>
+        <div class="line" style="top:68%;"></div>
+        <div class="line" style="top:75%;"></div>
+        <div class="line" style="top:83%;"></div>
+        <div class="line bold" style="top:90%;"></div>
+      </div>
+      <div class="intro-content">
+        <div class="bauhaus-text-bg">
+          <h1 class="bauhaus-title" data-text="TCCCS 2025">TCCCS 2025</h1>
+          <h2 class="bauhaus-subtitle">Theoretical and Computational Chemistry of Complex Systems</h2>
+          <div class="bauhaus-divider"></div>
+          <p class="bauhaus-desc">Okazaki, Japan<br>November 15th (Saturday), 2025</p>
+          <div class="bauhaus-btns">
+            <a href="https://www.ims.ac.jp/en/about/campus/access.html" class="btn btn-lg btn-outline">Venue</a>
+            <a href="#about" class="btn btn-lg btn-outline">About</a>
+            <a href="#program" class="btn btn-lg btn-outline">Program</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
   <!-- About Section -->
-<section id="about">
-  <div class="bauhaus-bg">
-    <div class="bauhaus-lines-regular">
-      <div class="line" style="top:8%;"></div>
-      <div class="line" style="top:15%;"></div>
-      <div class="line" style="top:23%;"></div>
-      <div class="line bold" style="top:30%;"></div>
-      <div class="line" style="top:38%;"></div>
-      <div class="line" style="top:45%;"></div>
-      <div class="line" style="top:53%;"></div>
-      <div class="line bold" style="top:60%;"></div>
-      <div class="line" style="top:68%;"></div>
-      <div class="line" style="top:75%;"></div>
-      <div class="line" style="top:83%;"></div>
-      <div class="line bold" style="top:90%;"></div>
-      <div class="line" style="top:97%;"></div>
-    </div>
-    <div class="about-content">
-      <div class="bauhaus-text-bg">
-        <h2 class="bauhaus-title">About</h2>
-        <div class="bauhaus-divider"></div>
-        <p class="bauhaus-desc">TCCCS aims to foster and strengthen a scholarly network, facilitating the exchange of research ideas by bringing together established and prominent researchers in the field.</p>
-        <div class="bauhaus-block">
-          <h4>Venue</h4>
-          <p><strong>Room 201, Research Building</strong><br>Institute for Molecular Science, Myodaiji Campus<br>Okazaki, Japan</p>
-        </div>
-        <div class="bauhaus-block">
-          <h4>Organizers</h4>
-          <p>Takafumi Shiraogawa, Pei Zhao<br>
-            <strong>Contact:</strong> <span class="bauhaus-email">shiraogawa@ims.ac.jp</span> / <span class="bauhaus-email">pei@ims.ac.jp</span>
-          </p>
-        </div>
-        <div class="bauhaus-note">
-          <strong>Please note:</strong> This is a tentative program and is subject to change.
-        </div>
-        <div class="bauhaus-note gray">
-          <strong>Registration:</strong> Invitation only
+  <section id="about">
+    <div class="bauhaus-bg">
+      <div class="bauhaus-lines-regular">
+        <div class="line" style="top:8%;"></div>
+        <div class="line" style="top:15%;"></div>
+        <div class="line" style="top:23%;"></div>
+        <div class="line bold" style="top:30%;"></div>
+        <div class="line" style="top:38%;"></div>
+        <div class="line" style="top:45%;"></div>
+        <div class="line" style="top:53%;"></div>
+        <div class="line bold" style="top:60%;"></div>
+        <div class="line" style="top:68%;"></div>
+        <div class="line" style="top:75%;"></div>
+        <div class="line" style="top:83%;"></div>
+        <div class="line bold" style="top:90%;"></div>
+        <div class="line" style="top:97%;"></div>
+      </div>
+      <div class="about-content">
+        <div class="bauhaus-text-bg">
+          <h2 class="bauhaus-title">About</h2>
+          <div class="bauhaus-divider"></div>
+          <p class="bauhaus-desc">TCCCS aims to foster and strengthen a scholarly network, facilitating the exchange of research ideas by bringing together established and prominent researchers in the field.</p>
+          <div class="bauhaus-block">
+            <h4>Venue</h4>
+            <p><strong>Room 201, Research Building</strong><br>Institute for Molecular Science, Myodaiji Campus<br>Okazaki, Japan</p>
+          </div>
+          <div class="bauhaus-block">
+            <h4>Organizers</h4>
+            <p>Takafumi Shiraogawa, Pei Zhao<br><strong>Contact:</strong> <span class="bauhaus-email">shiraogawa@ims.ac.jp</span> / <span class="bauhaus-email">pei@ims.ac.jp</span></p>
+          </div>
+          <div class="bauhaus-note">
+            <strong>Please note:</strong> This is a tentative program and is subject to change.
+          </div>
+          <div class="bauhaus-note gray">
+            <strong>Registration:</strong> Invitation only
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 <!-- Program Section -->
 <section id="program" class="bauhaus-section">
@@ -313,11 +277,11 @@
               </div>
             </div>
           </div>
-          <div class="lunch-break">
-            <div class="time-block">12:25-13:15</div>
-            <div class="break-title">Lunch & Discussion</div>
-            <p class="bauhaus-note" style="font-size: 1.4em; margin-top: 10px; color: #666;">(Lunch boxes will be prepared)</p>
-          </div>
+            <div class="lunch-break">
+              <div class="time-block">12:25-13:15</div>
+              <div class="break-title">Lunch & Discussion</div>
+              <p class="bauhaus-note" style="font-size: 1.4em; margin-top: 10px; color: #666;">(Lunch boxes will be prepared)</p>
+            </div>
           <div class="session-block afternoon-session">
             <div class="session-header">
               <div class="time-block">13:15-13:55</div>
@@ -347,9 +311,9 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-// Password protection
 const correctPassword = "ims-t3cs-2025";
 
+// Password protection functions
 function checkPassword() {
     const inputPassword = document.getElementById('password-input').value;
     const errorDiv = document.getElementById('password-error');
@@ -357,17 +321,12 @@ function checkPassword() {
 
     if (inputPassword === correctPassword) {
         overlay.style.display = 'none';
-        // Use localStorage instead of sessionStorage to persist across browser sessions
         localStorage.setItem('tcccs2025_authenticated', 'true');
         localStorage.setItem('tcccs2025_auth_time', Date.now().toString());
-        
-        // Clear any previous error messages
         errorDiv.style.display = 'none';
         
-        // Allow browser to save password by triggering form submission
         const form = document.getElementById('password-form');
         if (form) {
-            // Create a temporary submit event to trigger browser password save
             const submitEvent = new Event('submit', { bubbles: true, cancelable: true });
             form.dispatchEvent(submitEvent);
         }
@@ -376,15 +335,13 @@ function checkPassword() {
         document.getElementById('password-input').value = '';
         document.getElementById('password-input').focus();
     }
-    return false; // Prevent actual form submission
+    return false;
 }
 
-// Check if already authenticated
 function checkAuthentication() {
     const authenticated = localStorage.getItem('tcccs2025_authenticated');
     const authTime = localStorage.getItem('tcccs2025_auth_time');
     
-    // Check if authentication is valid (within 360 days)
     if (authenticated === 'true' && authTime) {
         const threeSixtyDaysInMs = 360 * 24 * 60 * 60 * 1000;
         const isValid = (Date.now() - parseInt(authTime)) < threeSixtyDaysInMs;
@@ -393,7 +350,6 @@ function checkAuthentication() {
             document.getElementById('password-overlay').style.display = 'none';
             return true;
         } else {
-            // Clear expired authentication
             localStorage.removeItem('tcccs2025_authenticated');
             localStorage.removeItem('tcccs2025_auth_time');
         }
@@ -410,59 +366,18 @@ function checkAuthentication() {
 window.onload = function() {
     checkAuthentication();
     
-    // Force scale the entire page
+    // Apply global scaling
     document.documentElement.style.fontSize = '60%';
     document.body.style.transform = 'scale(0.9)';
     document.body.style.transformOrigin = 'top left';
     document.body.style.width = '111%';
     document.body.style.height = '111%';
-    
-    // Force navigation font sizes
-    const navbarBrand = document.querySelector('.navbar-brand');
-    if (navbarBrand) navbarBrand.style.fontSize = '1.4rem';
-    
-    const navLinks = document.querySelectorAll('.navbar-nav > li > a');
-    navLinks.forEach(link => {
-        link.style.fontSize = '1.4rem';
-    });
-    
-    // Force banner button font sizes
-    const bannerBtns = document.querySelectorAll('.bauhaus-btns .btn');
-    bannerBtns.forEach(btn => {
-        btn.style.fontSize = '1.4rem';
-    });
-    
-    // Force small text sizes
-    const noteTexts = document.querySelectorAll('.bauhaus-note');
-    noteTexts.forEach(note => {
-        note.style.fontSize = '1.5em';
-    });
-    
-    const talkTimes = document.querySelectorAll('.talk-time');
-    talkTimes.forEach(time => {
-        time.style.fontSize = '1.5em';
-    });
-    
-    const timeBlocks = document.querySelectorAll('.time-block');
-    timeBlocks.forEach(block => {
-        block.style.fontSize = '1.6em';
-    });
-    
-    // 赤い装飾線（divider）だけを非表示にして、黒い線（line）は表示する
-    const redDividers = document.querySelectorAll('.bauhaus-divider');
-    redDividers.forEach(divider => {
-        divider.style.display = 'none';
-        divider.style.visibility = 'hidden';
-        divider.style.opacity = '0';
-    });
 };
 
-// Allow Enter key to submit password
 document.addEventListener('DOMContentLoaded', function() {
     const passwordInput = document.getElementById('password-input');
     const passwordForm = document.getElementById('password-form');
     
-    // Handle Enter key press
     passwordInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
             e.preventDefault();
@@ -470,13 +385,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Handle form submission
     passwordForm.addEventListener('submit', function(e) {
         e.preventDefault();
         checkPassword();
     });
     
-    // Add username field for better browser password management
     if (!document.getElementById('username-input')) {
         const usernameInput = document.createElement('input');
         usernameInput.type = 'text';
@@ -507,52 +420,12 @@ $(document).ready(function() {
         }
     });
 
-    // 外部リンク（VENUEなど）のクリック時にもモバイルメニューを閉じる
     $('.navbar-nav a[href^="http"]').click(function() {
         if ($(window).width() < 768) {
             $('#navbar-collapse').slideUp(300);
         }
     });
     
-    // フォントサイズ強制適用 - JavaScript
-    function applyFontSizes() {
-        // 基本設定
-        $('.bauhaus-note').css('font-size', '1.5em');
-        $('.talk-time').css('font-size', '1.5em');
-        $('.time-block').css('font-size', '1.6em');
-        $('.navbar-brand').css('font-size', '1.4rem');
-        $('.navbar-nav > li > a').css('font-size', '1.4rem');
-        $('.bauhaus-btns .btn').css('font-size', '1.51rem');
-        // バナーボタンをコンパクトに
-        $('.bauhaus-btns .btn').css('padding', '0.8rem 2rem');
-        
-        // モバイル端末の場合
-        if (window.innerWidth <= 767) {
-            $('.navbar-brand').css({'font-size': '1.0rem', 'letter-spacing': '0.1em'});
-            $('.navbar-nav > li > a').css('font-size', '1.0rem');
-            $('.bauhaus-title').css('font-size', '2.04em');
-            $('.bauhaus-subtitle').css('font-size', '1.0em');
-            $('.bauhaus-desc').css('font-size', '1.2em');
-            $('.btn, .btn-lg').css('font-size', '1.08rem');
-            // モバイルでもバナーボタンをコンパクトに
-            $('.bauhaus-btns .btn').css('padding', '0.6rem 1.5rem');
-            $('.session-title').css('font-size', '1.2em');
-            $('.talk-time').css('font-size', '1.0em');
-            $('.time-block').css('font-size', '1.1em');
-            $('.talk-content h3').css('font-size', '1.0em');
-            $('.talk-content .speaker').css('font-size', '1.0em');
-            $('.talk-content .title').css('font-size', '0.9em');
-            $('.break-title').css('font-size', '1.2em');
-            $('.bauhaus-note').css('font-size', '1.0em');
-            $('#about h2').css('font-size', '1.7em');
-        }
-    }
-    
-    // 初期適用とリサイズ時の適用
-    applyFontSizes();
-    $(window).resize(applyFontSizes);
-    
-    // Add clear authentication function (for debugging/testing)
     window.clearAuth = function() {
         localStorage.removeItem('tcccs2025_authenticated');
         localStorage.removeItem('tcccs2025_auth_time');

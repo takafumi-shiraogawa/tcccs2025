@@ -1,26 +1,44 @@
-/* FORCE RELOAD - Version 20250713-042 - Cache Buster */
-/* Global scaling optimized for proper display size */
+/* ===== GLOBAL STYLES ===== */
 html {
     font-size: 60%;
+    scroll-behavior: smooth;
 }
 
 body {
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.4;
-}
-
-/* Enhanced loading animation and page transitions */
-body {
+    color: #1a1a1a;
+    background: linear-gradient(135deg, #f5f5dc 0%, #f0f0e8 50%, #f5f5dc 100%);
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    min-height: 100vh;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
 }
 
+/* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Stagger animation for sections */
+@keyframes slideInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0rem) rotate(0deg); }
+    50% { transform: translateY(-1rem) rotate(2deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+/* ===== SECTION ANIMATIONS ===== */
 section {
     opacity: 0;
     transform: translateY(30px);
@@ -31,20 +49,9 @@ section:nth-child(1) { animation-delay: 0.1s; }
 section:nth-child(2) { animation-delay: 0.3s; }
 section:nth-child(3) { animation-delay: 0.5s; }
 
-@keyframes slideInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+/* ===== UTILITY STYLES ===== */
+* { box-sizing: border-box; }
 
-/* Enhanced hover effects for interactive elements */
-.bauhaus-text-bg {
-    position: relative;
-    z-index: 10;
-}
-
-/* Text selection styling */
 ::selection {
     background: rgba(227, 6, 19, 0.2);
     color: #1a1a1a;
@@ -55,36 +62,39 @@ section:nth-child(3) { animation-delay: 0.5s; }
     color: #1a1a1a;
 }
 
-/* Focus states for accessibility */
 *:focus {
     outline: 2px solid #ffcc00;
     outline-offset: 2px;
 }
 
-/* Smooth scrolling behavior */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Custom scrollbar styling */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(135deg, #e30613 0%, #ff1a2e 100%);
     border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, #ff1a2e 0%, #e30613 100%);
 }
 
-/* Enhanced Bauhaus Background Container with gradient */
+.text-center { text-align: center; }
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Text elements unified sizing */
+strong, em, b, i, span { font-size: 1em; }
+strong, b { font-weight: 700; }
+em, i { font-style: italic; }
+
+/* ===== BAUHAUS DESIGN SYSTEM ===== */
 .bauhaus-bg {
     position: relative;
     padding: 1.5rem 0;
@@ -94,14 +104,12 @@ html {
     box-shadow: inset 0 0 5rem rgba(0,0,0,0.03);
 }
 
-/* Allow header bauhaus background to show full-width lines */
 header .bauhaus-bg {
     overflow: visible;
     width: 100%;
     flex: 0 0 100%;
 }
 
-/* Bauhaus poster style: regular black horizontal lines */
 .bauhaus-lines-regular {
     position: absolute;
     left: 0;
@@ -112,6 +120,7 @@ header .bauhaus-bg {
     z-index: 1;
     margin-left: calc(-50vw + 50%);
 }
+
 .bauhaus-lines-regular .line {
     position: absolute;
     left: 0;
@@ -121,73 +130,37 @@ header .bauhaus-bg {
     background: none;
     opacity: 1;
 }
-/* For bold lines (every 4th line) */
+
 .bauhaus-lines-regular .line.bold {
     border-top-width: 0.7rem;
 }
 
-/* Enhanced text readability background for Bauhaus sections */
 .bauhaus-text-bg {
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 1.6rem;
-  box-shadow: 0 0.8rem 3.2rem rgba(0,0,0,0.12), 0 0.2rem 0.8rem rgba(0,0,0,0.08);
-  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
-  margin: 0 auto 3rem auto;
-  max-width: 56rem;
-  position: relative;
-  z-index: 10;
-  backdrop-filter: blur(1.2rem);
-  border: 0.1rem solid rgba(255,255,255,0.2);
-  transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 1.6rem;
+    box-shadow: 0 0.8rem 3.2rem rgba(0,0,0,0.12), 0 0.2rem 0.8rem rgba(0,0,0,0.08);
+    padding: 2.5rem;
+    margin: 0 auto 3rem auto;
+    max-width: 56rem;
+    position: relative;
+    z-index: 10;
+    backdrop-filter: blur(1.2rem);
+    border: 0.1rem solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
 }
 
 .bauhaus-text-bg:hover {
-  box-shadow: 0 1.2rem 4rem rgba(0,0,0,0.15), 0 0.4rem 1.2rem rgba(0,0,0,0.1);
-  transform: translateY(-0.2rem);
-}
-/* Bauhaus Design System */
-* {
-    box-sizing: border-box;
+    box-shadow: 0 1.2rem 4rem rgba(0,0,0,0.15), 0 0.4rem 1.2rem rgba(0,0,0,0.1);
+    transform: translateY(-0.2rem);
 }
 
-body {
-    font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-size: 1.6rem;
-    line-height: 1.7;
-    color: #1a1a1a;
-    background: linear-gradient(135deg, #f5f5dc 0%, #f0f0e8 50%, #f5f5dc 100%);
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-    min-height: 100vh;
+/* ===== NAVIGATION ===== */
+.container {
+    padding: 0 1.05rem;
+    margin: 0 auto;
+    max-width: 81.9rem;
 }
 
-/* すべてのテキスト要素を相対サイズに統一 */
-strong {
-    font-size: 1em;
-    font-weight: 700;
-}
-
-em {
-    font-size: 1em;
-    font-style: italic;
-}
-
-b {
-    font-size: 1em;
-    font-weight: 700;
-}
-
-i {
-    font-size: 1em;
-    font-style: italic;
-}
-
-span {
-    font-size: 1em;
-}
-
-/* Enhanced Bauhaus Navigation with modern styling */
 .navbar {
     border: none;
     background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
@@ -246,14 +219,11 @@ span {
 }
 
 .navbar-nav > li > a {
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+    padding: 0.8rem 1.2rem;
     line-height: 1.6rem;
     color: #fff !important;
     text-decoration: none;
     display: block;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     letter-spacing: 0.06em;
@@ -285,22 +255,12 @@ span {
     width: 80%;
 }
 
-.container {
-    padding: 0 1.05rem;
-    margin: 0 auto;
-    max-width: 81.9rem;
-}
-
-/* Mobile toggle button - Bauhaus style */
 .navbar-toggle {
     position: relative;
     float: right;
     padding: 0.84rem 1.05rem;
-    margin-top: 0.8rem;
-    margin-right: 1.4rem;
-    margin-bottom: 0.8rem;
+    margin: 0.8rem 1.4rem 0.8rem 0;
     background: #fff;
-    background-image: none;
     border: 0.14rem solid #000;
     border-radius: 0;
     display: none;
@@ -325,23 +285,11 @@ span {
     background-color: #fff;
 }
 
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-/* Enhanced Clean Bauhaus Header */
+/* ===== HEADER SECTION ===== */
 header {
     background: linear-gradient(135deg, #f5f5dc 0%, #f0ede8 50%, #f5f5dc 100%);
     color: #1a1a1a;
-    padding-top: 20px;
-    padding-bottom: 15px;
+    padding: 20px 0 15px;
     text-align: center;
     position: relative;
     overflow: visible;
@@ -352,7 +300,6 @@ header {
     box-shadow: inset 0 0 100px rgba(0,0,0,0.03);
 }
 
-/* Enhanced large geometric elements with subtle animations */
 header::before {
     content: '';
     position: absolute;
@@ -364,14 +311,8 @@ header::before {
     border-radius: 50%;
     z-index: 1;
     opacity: 0.95;
-    border: none;
     animation: float 6s ease-in-out infinite;
     box-shadow: 0 1.7rem 5.1rem rgba(255,204,0,0.2);
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0rem) rotate(0deg); }
-    50% { transform: translateY(-1rem) rotate(2deg); }
 }
 
 header::after {
@@ -384,18 +325,11 @@ header::after {
     background: linear-gradient(135deg, #e30613 0%, #ff1a2e 100%);
     z-index: 1;
     opacity: 1.0;
-    border: none;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     animation: pulse 4s ease-in-out infinite;
     box-shadow: 0 1.7rem 5.1rem rgba(227,6,19,0.2);
 }
 
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.02); }
-}
-
-/* Additional large header shapes */
 header .container::before {
     content: '';
     position: absolute;
@@ -406,7 +340,6 @@ header .container::before {
     background: #000;
     z-index: 1;
     opacity: 1.0;
-    border: none;
     transform: rotate(-5deg);
 }
 
@@ -420,11 +353,10 @@ header .container::after {
     background: #0066cc;
     z-index: 1;
     opacity: 1.0;
-    border: none;
     clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 }
 
-/* Enhanced buttons with modern Bauhaus style */
+/* ===== BUTTONS ===== */
 .btn {
     display: inline-block;
     padding: 1.4rem 3.5rem;
@@ -493,20 +425,13 @@ header .container::after {
     padding: 0 5px;
 }
 
-/* Clean About Section - inspired by Bauhaus posters */
+/* ===== ABOUT SECTION ===== */
 #about {
     padding: 15px 0;
     background: #f5f5dc;
     position: relative;
     overflow: hidden;
     z-index: 2;
-}
-
-/* Bauhaus shapes for About section */
-#about {
-    position: relative;
-    overflow: hidden;
-    background-color: #f5f5dc;
 }
 
 #about .container {
@@ -525,7 +450,6 @@ header .container::after {
     border-radius: 50%;
     z-index: 1;
     opacity: 1.0;
-    border: none;
 }
 
 #about::after {
@@ -538,11 +462,9 @@ header .container::after {
     background: #0066cc;
     z-index: 1;
     opacity: 1.0;
-    border: none;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
-/* Additional large geometric shapes */
 #about .container::before {
     content: '';
     position: absolute;
@@ -553,7 +475,6 @@ header .container::after {
     background: #ffcc00;
     z-index: 1;
     opacity: 1.0;
-    border: none;
     transform: rotate(-5deg);
 }
 
@@ -567,7 +488,6 @@ header .container::after {
     background: #333;
     z-index: 1;
     opacity: 1.0;
-    border: none;
     clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%);
 }
 
@@ -596,17 +516,7 @@ header .container::after {
     font-weight: 400;
 }
 
-/* Utility classes */
-.text-center { text-align: center; }
-
-/* Clearfix */
-.container:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Clean Program Section - Bauhaus style */
+/* ===== PROGRAM SECTION ===== */
 .bauhaus-section {
     background: #f5f5dc;
     padding: 15px 0;
@@ -615,7 +525,6 @@ header .container::after {
     z-index: 2;
 }
 
-/* Large geometric objects inspired by Bauhaus */
 .bauhaus-section::before {
     content: '';
     position: absolute;
@@ -627,7 +536,6 @@ header .container::after {
     border-radius: 50%;
     z-index: 1;
     opacity: 1.0;
-    border: none;
 }
 
 .bauhaus-section::after {
@@ -640,11 +548,9 @@ header .container::after {
     background: #ffcc00;
     z-index: 1;
     opacity: 1.0;
-    border: none;
     clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%);
 }
 
-/* Additional large shapes for Program section */
 .bauhaus-section .container::before {
     content: '';
     position: absolute;
@@ -655,7 +561,6 @@ header .container::after {
     background: #e30613;
     z-index: 1;
     opacity: 1.0;
-    border: none;
     transform: rotate(8deg);
 }
 
@@ -669,59 +574,10 @@ header .container::after {
     background: #000;
     z-index: 1;
     opacity: 1.0;
-    border: none;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
-/* Modern Bauhaus patterns for Program section */
- .bauhaus-section .modern-pattern-1 {
-    position: absolute;
-    top: 45%;
-    left: 2%;
-    width: 240px;
-    height: 240px;
-    background: linear-gradient(135deg, #e30613 50%, transparent 50%);
-    z-index: 1;
-    opacity: 1.0;
-    border-radius: 0 50% 0 50%;
-}
-
- .bauhaus-section .modern-pattern-2 {
-    position: absolute;
-    top: 20%;
-    right: 20%;
-    width: 180px;
-    height: 360px;
-    background: repeating-linear-gradient(
-        45deg,
-        #ffcc00 0px,
-        #ffcc00 12px,
-        transparent 12px,
-        transparent 24px
-    );
-    z-index: 1;
-    opacity: 1.0;
-    transform: rotate(-15deg);
-}
-
- .bauhaus-section .modern-pattern-3 {
-    position: absolute;
-    bottom: 12%;
-    right: 35%;
-    width: 400px;
-    height: 80px;
-    background: repeating-linear-gradient(
-        0deg,
-        #0066cc 0px,
-        #0066cc 8px,
-        #f5f5dc 8px,
-        #f5f5dc 16px
-    );
-    z-index: 1;
-    opacity: 1.0;
-    transform: rotate(8deg);
-}
-
+/* ===== BAUHAUS CONTENT STYLES ===== */
 .bauhaus-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
@@ -742,6 +598,23 @@ header .container::after {
     text-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
+.bauhaus-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2.16em;
+    color: #666;
+    margin: 8px 0 16px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bauhaus-desc {
+    font-size: 1.68em;
+    line-height: 1.6;
+    color: #333;
+    margin: 16px 0;
+}
+
 .bauhaus-divider {
     width: 14rem;
     height: 0.8rem;
@@ -757,6 +630,56 @@ header .container::after {
     box-shadow: 0 0.4rem 1.2rem rgba(227,6,19,0.4);
 }
 
+.bauhaus-btns {
+    margin-top: 24px;
+}
+
+.bauhaus-block {
+    margin: 2rem 0;
+    padding: 1.6rem 0;
+    border-top: 0.2rem solid #e0e0e0;
+}
+
+.bauhaus-block:first-of-type {
+    border-top: none;
+}
+
+.bauhaus-block h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.16em;
+    color: #000;
+    margin: 0 0 0.8rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.bauhaus-block p {
+    font-size: 1.68em;
+    line-height: 1.6;
+    color: #333;
+    margin: 0.4rem 0;
+}
+
+.bauhaus-email {
+    color: #0066cc;
+    font-weight: 600;
+}
+
+.bauhaus-note {
+    background: #f8f8f8;
+    padding: 1.2rem 1.6rem;
+    margin: 1.6rem 0;
+    border-left: 0.4rem solid #ffcc00;
+    font-size: 1.8em;
+    line-height: 1.5;
+}
+
+.bauhaus-note.gray {
+    border-left-color: #666;
+}
+
+/* ===== PROGRAM SCHEDULE ===== */
 .program-schedule {
     max-width: 100rem;
     margin: 0 auto;
@@ -764,7 +687,6 @@ header .container::after {
     z-index: 10;
 }
 
-/* Enhanced session blocks with modern styling */
 .session-block {
     margin-bottom: 1.5rem;
     background: #ffffff;
@@ -772,7 +694,6 @@ header .container::after {
     box-shadow: 0 0.8rem 2.5rem rgba(0,0,0,0.08), 0 0.2rem 0.8rem rgba(0,0,0,0.04);
     overflow: hidden;
     position: relative;
-    border: none;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 10;
 }
@@ -856,15 +777,12 @@ header .container::after {
 }
 
 .talk-grid {
-    padding: 0;
-    text-align: center;
+    padding: 2rem 3rem;
 }
 
-.talk-item,
-.break-item,
-.poster-session {
-    border-bottom: 0.1rem solid #e0e0e0;
-    padding: 1.5rem 2rem;
+.talk-item {
+    padding: 2rem;
+    border-bottom: 0.1rem solid rgba(0,0,0,0.06);
     display: flex;
     align-items: flex-start;
     transition: all 0.3s ease;
@@ -875,28 +793,13 @@ header .container::after {
     background: #f5f5f5;
 }
 
-.talk-item:last-child,
-.break-item:last-child,
-.poster-session:last-child {
+.talk-item:last-child {
     border-bottom: none;
 }
 
 .talk-item.keynote {
     background: #fff5f5;
     border-left: 0.4rem solid #e30613;
-}
-
-.break-item {
-    background: #f0f0f0;
-    font-style: italic;
-    color: #666;
-    justify-content: center;
-    text-align: center;
-}
-
-.poster-session {
-    background: #f0f8ff;
-    border-left: 0.4rem solid #0066cc;
 }
 
 .talk-time {
@@ -947,7 +850,11 @@ header .container::after {
     font-size: 1.8em;
 }
 
-/* Enhanced lunch break styling */
+.speaker-name {
+    color: #0066cc;
+    font-weight: 600;
+}
+
 .lunch-break {
     background: linear-gradient(135deg, #ffcc00 0%, #ffd633 100%);
     color: #1a1a1a;
@@ -955,7 +862,6 @@ header .container::after {
     text-align: center;
     margin: 1.5rem 0;
     border-radius: 1.2rem;
-    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -977,11 +883,6 @@ header .container::after {
     animation: shimmer 3s ease-in-out infinite;
 }
 
-@keyframes shimmer {
-    0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
-    50% { transform: translate(-50%, -50%) rotate(180deg); }
-}
-
 .lunch-break:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1.6rem 4rem rgba(255, 204, 0, 0.3), 0 0.6rem 1.6rem rgba(255, 204, 0, 0.2);
@@ -995,301 +896,7 @@ header .container::after {
     box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.15);
 }
 
-.break-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.8em;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-}
-
-
-
-
-/* Responsive adjustments for Program section */
-@media (max-width: 767px) {
-    .bauhaus-title {
-        font-size: 2.5em;
-        letter-spacing: 1px;
-    }
-    
-    .session-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-    
-    .talk-item,
-    .break-item,
-    .poster-session {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-    
-    .talk-time {
-        margin-right: 0;
-        margin-bottom: 15px;
-        align-self: center;
-    }
-    
-    .lunch-break {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .program-schedule {
-        margin: 0 15px;
-    }
-}
-
-/* Enhanced responsive design with modern animations */
-@media (max-width: 767px) {
-    .navbar-toggle { display: block; }
-    
-    .navbar-collapse {
-        display: none;
-        background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
-        margin-top: 1rem;
-        border-radius: 0.8rem;
-        border: 0.2rem solid rgba(255,204,0,0.3);
-        backdrop-filter: blur(1rem);
-        box-shadow: 0 0.8rem 2.5rem rgba(0,0,0,0.2);
-    }
-    
-    .navbar-nav { float: none; margin: 0; }
-    .navbar-nav > li { 
-        float: none; 
-        width: 100%;
-        margin: 0;
-        list-style: none;
-    }
-    .navbar-nav > li > a {
-        padding: 1.8rem;
-        border-bottom: 0.1rem solid rgba(255,255,255,0.1);
-        transition: all 0.3s ease;
-        font-size: 1.0rem;
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin: 0;
-    }
-    .navbar-nav > li > a:hover {
-        background: rgba(255,204,0,0.1);
-        transform: translateX(0.5rem);
-    }
-    .navbar-nav > li:last-child > a { border-bottom: none; }
-    
-    .col-lg-4, .col-lg-8, .col-lg-12 { width: 100%; margin-left: 0; }
-    .col-lg-offset-2 { margin-left: 0; }
-    
-    header { 
-        padding: 4rem 0 3rem; 
-        min-height: 40vh;
-    }
-    
-    /* レスポンシブフォントサイズ - すべてのテキスト要素を統一 */
-    #about h2 { 
-        font-size: 1.7em; 
-        letter-spacing: 0rem; 
-    }
-    
-    .bauhaus-title { 
-        font-size: 2.04em; 
-        letter-spacing: -0.1rem; 
-    }
-    
-    .bauhaus-subtitle {
-        font-size: 1.2em;
-        letter-spacing: 0.05em;
-    }
-    
-    .bauhaus-desc {
-        font-size: 1.2em;
-        line-height: 1.4;
-    }
-    
-    .bauhaus-block h4 {
-        font-size: 1.56em;
-        letter-spacing: 0.05em;
-    }
-    
-    .bauhaus-block p {
-        font-size: 1.32em;
-    }
-    
-    .btn {
-        font-size: 1.2rem;
-        padding: 1rem 2rem;
-        letter-spacing: 0.08em;
-    }
-    
-    .btn-lg {
-        font-size: 1.2rem;
-        padding: 1.2rem 2.5rem;
-    }
-    
-    .navbar-brand {
-        font-size: 1.2rem;
-        letter-spacing: 0.1em;
-    }
-    
-    .session-title {
-        font-size: 1.2em;
-        letter-spacing: 1px;
-    }
-    
-    .session-header { 
-        flex-direction: column; 
-        text-align: center; 
-        gap: 1.8rem; 
-        padding: 2.5rem 2rem;
-    }
-    
-    .talk-item, .break-item, .poster-session { 
-        flex-direction: column; 
-        text-align: center; 
-        padding: 2.5rem; 
-    }
-    
-    .talk-time { 
-        margin: 0 0 1.8rem 0; 
-        align-self: center;
-        font-size: 1.2em;
-    }
-    
-    .time-block {
-        font-size: 1.2em;
-        padding: 0.8rem 1.5rem;
-        letter-spacing: 0.05em;
-    }
-    
-    .talk-content h3 {
-        font-size: 1.2em;
-        letter-spacing: 0.05em;
-    }
-    
-    .talk-content .speaker {
-        font-size: 1.2em;
-    }
-    
-    .talk-content .title {
-        font-size: 1.2em;
-        line-height: 1.3;
-    }
-    
-    .break-title {
-        font-size: 1.2em;
-        letter-spacing: 0.1em;
-    }
-    
-    .bauhaus-note {
-        font-size: 1.2em;
-        padding: 1rem 1.2rem;
-    }
-    
-    .lunch-break { 
-        flex-direction: column; 
-        gap: 1.8rem; 
-        padding: 2.5rem 2rem;
-    }
-    
-    .program-schedule { 
-        margin: 0 1.5rem; 
-    }
-    
-    .bauhaus-text-bg {
-        margin: 0 1.5rem 6rem 1.5rem;
-        padding: 3rem 2.5rem;
-        max-width: 90%;
-    }
-    
-    /* Mobile geometric elements scaling */
-    header::before {
-        width: 20.4rem;
-        height: 20.4rem;
-        top: 15%;
-        right: 5%;
-    }
-    
-    header::after {
-        width: 17rem;
-        height: 17rem;
-        bottom: 20%;
-        left: 5%;
-    }
-}
-
-/* Additional Bauhaus styles for content */
-.bauhaus-subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 2.16em;
-    color: #666;
-    margin: 8px 0 16px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.bauhaus-desc {
-    font-size: 1.68em;
-    line-height: 1.6;
-    color: #333;
-    margin: 16px 0;
-}
-
-.bauhaus-btns {
-    margin-top: 24px;
-}
-
-.bauhaus-block {
-    margin: 2rem 0;
-    padding: 1.6rem 0;
-    border-top: 0.2rem solid #e0e0e0;
-}
-
-.bauhaus-block:first-of-type {
-    border-top: none;
-}
-
-.bauhaus-block h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 2.16em;
-    color: #000;
-    margin: 0 0 0.8rem 0;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.bauhaus-block p {
-    font-size: 1.68em;
-    line-height: 1.6;
-    color: #333;
-    margin: 0.4rem 0;
-}
-
-.bauhaus-email {
-    color: #0066cc;
-    font-weight: 600;
-}
-
-.bauhaus-note {
-    background: #f8f8f8;
-    padding: 1.2rem 1.6rem;
-    margin: 1.6rem 0;
-    border-left: 0.4rem solid #ffcc00;
-    font-size: 1.8em;
-    line-height: 1.5;
-}
-
-/* Speaker name styling */
-.speaker-name {
-    color: #0066cc;
-    font-weight: 600;
-}
-
-/* Password Protection Overlay */
+/* ===== PASSWORD PROTECTION ===== */
 .password-overlay {
     position: fixed;
     top: 0;
@@ -1309,9 +916,8 @@ header .container::after {
     border-radius: 12px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     padding: 0;
-    max-width: 400px;
-    width: 90%;
     max-width: min(400px, calc(100vw - 40px));
+    width: 90%;
     overflow: hidden;
     border: 3px solid #000;
     box-sizing: border-box;
@@ -1463,8 +1069,162 @@ header .container::after {
     z-index: 2;
 }
 
-/* Responsive password form */
-@media (max-width: 480px) {
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 767px) {
+    .navbar-toggle { display: block; }
+    
+    .navbar-collapse {
+        display: none;
+        background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+        margin-top: 1rem;
+        border-radius: 0.8rem;
+        border: 0.2rem solid rgba(255,204,0,0.3);
+        backdrop-filter: blur(1rem);
+        box-shadow: 0 0.8rem 2.5rem rgba(0,0,0,0.2);
+    }
+    
+    .navbar-nav { 
+        float: none; 
+        margin: 0; 
+    }
+    
+    .navbar-nav > li { 
+        float: none; 
+        width: 100%;
+        margin: 0;
+        list-style: none;
+    }
+    
+    .navbar-nav > li > a {
+        padding: 1.8rem;
+        text-align: center;
+        border-bottom: 0.1rem solid rgba(255,204,0,0.1);
+        font-size: 1.2rem;
+    }
+    
+    .navbar-nav > li:last-child > a {
+        border-bottom: none;
+    }
+    
+    header { 
+        padding: 4rem 0 3rem; 
+        min-height: 40vh;
+    }
+    
+    .bauhaus-title { 
+        font-size: 2.5em; 
+        letter-spacing: -0.1rem; 
+    }
+    
+    .bauhaus-subtitle {
+        font-size: 1.2em;
+        letter-spacing: 0.05em;
+    }
+    
+    .bauhaus-desc {
+        font-size: 1.2em;
+        line-height: 1.4;
+    }
+    
+    .bauhaus-block h4 {
+        font-size: 1.56em;
+        letter-spacing: 0.05em;
+    }
+    
+    .bauhaus-block p {
+        font-size: 1.32em;
+    }
+    
+    .btn {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        letter-spacing: 0.08em;
+    }
+    
+    .btn-lg {
+        font-size: 1.2rem;
+        padding: 1.2rem 2.5rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+        letter-spacing: 0.1em;
+    }
+    
+    .session-header { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 1.8rem; 
+        padding: 2.5rem 2rem;
+    }
+    
+    .talk-item { 
+        flex-direction: column; 
+        text-align: center; 
+        padding: 2.5rem; 
+    }
+    
+    .talk-time { 
+        margin: 0 0 1.8rem 0; 
+        align-self: center;
+        font-size: 1.2em;
+    }
+    
+    .time-block {
+        font-size: 1.2em;
+        padding: 0.8rem 1.5rem;
+        letter-spacing: 0.05em;
+    }
+    
+    .talk-content .speaker {
+        font-size: 1.2em;
+    }
+    
+    .talk-content .title {
+        font-size: 1.2em;
+        line-height: 1.3;
+    }
+    
+    .break-title {
+        font-size: 1.2em;
+        letter-spacing: 0.1em;
+    }
+    
+    .bauhaus-note {
+        font-size: 1.2em;
+        padding: 1rem 1.2rem;
+    }
+    
+    .lunch-break { 
+        flex-direction: column; 
+        gap: 1.8rem; 
+        padding: 2.5rem 2rem;
+    }
+    
+    .program-schedule { 
+        margin: 0 1.5rem; 
+    }
+    
+    .bauhaus-text-bg {
+        margin: 0 1.5rem 6rem 1.5rem;
+        padding: 3rem 2.5rem;
+        max-width: 90%;
+    }
+    
+    header::before {
+        width: 20.4rem;
+        height: 20.4rem;
+        top: 15%;
+        right: 5%;
+    }
+    
+    header::after {
+        width: 17rem;
+        height: 17rem;
+        bottom: 20%;
+        left: 5%;
+    }
+    
     .password-container {
         width: 95%;
         margin: 20px;
@@ -1491,4 +1251,56 @@ header .container::after {
     }
 }
 
-/* Bauhaus Background Container */
+/* ===== FOOTER COPYRIGHT ===== */
+footer {
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    position: relative;
+    overflow: hidden;
+    border-top: 0.3rem solid #ffcc00;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 204, 0, 0.05) 0%, transparent 70%);
+    animation: shimmer 4s ease-in-out infinite;
+}
+
+.copyright {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 0.05em;
+    position: relative;
+    z-index: 2;
+}
+
+.copyright-name {
+    color: #ffcc00;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+@media (max-width: 767px) {
+    footer {
+        padding: 1.5rem 0;
+        margin-top: 2rem;
+    }
+    
+    .copyright {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+    }
+}
+
