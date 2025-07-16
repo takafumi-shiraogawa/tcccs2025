@@ -852,6 +852,17 @@ header .container::after {
 .speaker-name {
     color: #0066cc;
     font-weight: 600;
+    display: block;
+    line-height: 1.3;
+}
+
+.speaker-affiliation {
+    color: #666;
+    font-weight: 400;
+    font-size: 0.9em;
+    display: block;
+    line-height: 1.2;
+    margin-top: 0.05em;
 }
 
 .lunch-break {
@@ -1304,6 +1315,10 @@ header .container::after {
     
     .talk-content .speaker {
         font-size: 1.2em !important;
+    }
+    
+    .speaker-affiliation {
+        font-size: 0.95em !important;
     }
     
     .talk-content .title {
